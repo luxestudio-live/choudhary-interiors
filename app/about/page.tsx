@@ -85,7 +85,7 @@ export default function AboutPage() {
               </div>
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="/images/team.jpg" 
+                  src="/choudhary-interiors/images/team.jpg" 
                   alt="Rahul and Raj choudhary, choudhary Interiors founders"
                   className="w-full h-full object-cover"
                 />
@@ -168,7 +168,7 @@ export default function AboutPage() {
               {/* Founder 1 */}
               <div className="bg-white rounded-2xl p-8 shadow-md text-center">
                 <img 
-                  src="/images/rahul.jpg" 
+                  src="/choudhary-interiors/images/rahul.jpg" 
                   alt="Rahul choudhary" 
                   className="w-32 h-32 rounded-full object-cover mx-auto mb-6"
                 />
@@ -180,7 +180,7 @@ export default function AboutPage() {
               {/* Founder 2 */}
               <div className="bg-white rounded-2xl p-8 shadow-md text-center">
                 <img 
-                  src="/images/des2.jpg" 
+                  src="/choudhary-interiors/images/des2.jpg"
                   alt="Raj choudhary" 
                   className="w-32 h-32 rounded-full object-cover mx-auto mb-6"
                 />

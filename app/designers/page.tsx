@@ -16,7 +16,7 @@ export default function DesignersPage() {
       reviews: 245,
       projects: 120,
       location: 'Mumbai',
-      image: '/images/rahul.jpg',
+      image: '/choudhary-interiors/images/rahul.jpg',
       achievements: ['Best Designer 2022', 'Excellence Award 2021', '500+ Happy Clients'],
       services: ['Home Design', 'Modular Furniture', 'Space Planning']
     },
@@ -30,7 +30,7 @@ export default function DesignersPage() {
       reviews: 198,
       projects: 95,
       location: 'Mumbai',
-      image: '/images/des2.jpg',
+      image: '/choudhary-interiors/images/des2.jpg',
       achievements: ['Commercial Excellence', 'Top Designer 2023', '₹50Cr+ Project Value'],
       services: ['Commercial Design', 'Luxury Interiors', 'Project Management']
     }
