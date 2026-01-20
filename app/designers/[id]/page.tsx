@@ -16,7 +16,7 @@ const designersData: Record<string, any> = {
     reviews: 245,
     projects: 120,
     location: 'Mumbai',
-    image: '/images/rahul.jpg',
+    image: '/choudhary-interiors/images/rahul.jpg',
     achievements: ['Best Designer 2022', 'Excellence Award 2021', '500+ Happy Clients'],
     services: ['Home Design', 'Modular Furniture', 'Space Planning', '3D Visualization', 'Consultation'],
     experience: '12+ Years',
@@ -24,9 +24,9 @@ const designersData: Record<string, any> = {
     projectTypes: ['Apartments', 'Villas', 'Penthouses', 'Townhouses'],
     languages: ['English', 'Hindi', 'Marathi'],
     portfolio: [
-      { title: 'Modern Luxury Apartment', location: 'Mumbai', image: '/images/pf1.jpg' },
-      { title: 'Cozy Family Home', location: 'Mumbai', image: '/images/pf4.jpg' },
-      { title: 'Contemporary Kitchen', location: 'Mumbai', image: '/images/pf3.jpg' }
+      { title: 'Modern Luxury Apartment', location: 'Mumbai', image: '/choudhary-interiors/images/pf1.jpg' },
+      { title: 'Cozy Family Home', location: 'Mumbai', image: '/choudhary-interiors/images/pf4.jpg' },
+      { title: 'Contemporary Kitchen', location: 'Mumbai', image: '/choudhary-interiors/images/pf3.jpg' }
     ]
   },
   '2': {
@@ -38,7 +38,7 @@ const designersData: Record<string, any> = {
     reviews: 198,
     projects: 95,
     location: 'Mumbai',
-    image: '/images/des2.jpg',
+    image: '/choudhary-interiors/images/des2.jpg',
     achievements: ['Commercial Excellence', 'Top Designer 2023', '₹50Cr+ Project Value'],
     services: ['Commercial Design', 'Luxury Interiors', 'Project Management', 'Consultation', 'Space Planning'],
     experience: '15 Years',
@@ -46,9 +46,9 @@ const designersData: Record<string, any> = {
     projectTypes: ['Corporate Offices', 'Luxury Homes', 'Retail Spaces', 'Hotels'],
     languages: ['English', 'Hindi', 'Gujarati'],
     portfolio: [
-      { title: 'Corporate Headquarters', location: 'Mumbai', image: '/images/office.jpg' },
-      { title: 'Luxury Penthouse', location: 'Mumbai', image: '/images/proj2.jpg' },
-      { title: 'Modern Office Space', location: 'Mumbai', image: '/images/pf7.jpg' }
+      { title: 'Corporate Headquarters', location: 'Mumbai', image: '/choudhary-interiors/images/office.jpg' },
+      { title: 'Luxury Penthouse', location: 'Mumbai', image: '/choudhary-interiors/images/proj2.jpg' },
+      { title: 'Modern Office Space', location: 'Mumbai', image: '/choudhary-interiors/images/pf7.jpg' }
     ]
   }
 };

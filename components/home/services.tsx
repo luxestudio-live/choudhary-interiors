@@ -9,37 +9,37 @@ export default function Services() {
       icon: Home,
       title: 'Residential Design',
       description: 'Transform your home into a stunning space that reflects your personality and lifestyle',
-      image: '/images/living.jpg'
+      image: '/choudhary-interiors/images/living.jpg'
     },
     {
       icon: Building2,
       title: 'Commercial Interiors',
       description: 'Create productive, professional spaces that elevate your corporate environment',
-      image: '/images/office.jpg'
+      image: '/choudhary-interiors/images/office.jpg'
     },
     {
       icon: Sofa,
       title: 'Modular Furniture',
       description: 'Custom-designed modular solutions for optimal space utilization',
-      image: '/images/wardrobe.jpg'
+      image: '/choudhary-interiors/images/wardrobe.jpg'
     },
     {
       icon: Wind,
       title: 'Space Planning',
       description: 'Smart layouts and design strategies to maximize your space efficiently',
-      image: '/images/bedroom.jpg'
+      image: '/choudhary-interiors/images/bedroom.jpg'
     },
     {
       icon: Users,
       title: 'Consultation',
       description: 'Expert advice from our seasoned designers to guide your vision',
-      image: '/images/kitchen.jpg'
+      image: '/choudhary-interiors/images/kitchen.jpg'
     },
     {
       icon: FileText,
       title: '3D Visualization',
       description: 'See your design come to life before implementation',
-      image: '/images/proj2.jpg'
+      image: '/choudhary-interiors/images/proj2.jpg'
     }
   ]
 

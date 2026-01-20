@@ -9,7 +9,7 @@ export default function ServicesPage() {
     {
       title: 'Residential Interior Design',
       description: 'Transform your home into a stunning living space that perfectly reflects your lifestyle and personality.',
-      image: '/images/living.jpg',
+      image: '/choudhary-interiors/images/living.jpg',
       features: [
         'Complete home interior design',
         'Bedroom & living area design',
@@ -23,7 +23,7 @@ export default function ServicesPage() {
     {
       title: 'Commercial Office Interiors',
       description: 'Create productive, professional spaces that enhance employee experience and reflect your brand identity.',
-      image: '/images/office.jpg',
+      image: '/choudhary-interiors/images/office.jpg',
       features: [
         'Office space planning',
         'Reception & meeting areas',
@@ -37,7 +37,7 @@ export default function ServicesPage() {
     {
       title: 'Modular Furniture Solutions',
       description: 'Smart, space-efficient modular designs that maximize your space while maintaining aesthetic appeal.',
-      image: '/images/wardrobe.jpg',
+      image: '/choudhary-interiors/images/wardrobe.jpg',
       features: [
         'Custom modular design',
         'Built-in wardrobes',
@@ -51,7 +51,7 @@ export default function ServicesPage() {
     {
       title: 'Space Planning & Optimization',
       description: 'Strategic space planning to maximize functionality and flow in your residential or commercial space.',
-      image: '/images/bedroom.jpg',
+      image: '/choudhary-interiors/images/bedroom.jpg',
       features: [
         'Floor plan analysis',
         'Layout optimization',
@@ -65,7 +65,7 @@ export default function ServicesPage() {
     {
       title: 'Design Consultation',
       description: 'Get expert advice from our experienced designers to guide your interior design journey.',
-      image: '/images/kitchen.jpg',
+      image: '/choudhary-interiors/images/kitchen.jpg',
       features: [
         'One-on-one consultation',
         'Design concept development',
@@ -79,7 +79,7 @@ export default function ServicesPage() {
     {
       title: '3D Visualization & Rendering',
       description: 'See your design come to life before implementation with photorealistic 3D visualizations.',
-      image: '/images/proj2.jpg',
+      image: '/choudhary-interiors/images/proj2.jpg',
       features: [
         'High-quality 3D renderings',
         'Multiple design options',

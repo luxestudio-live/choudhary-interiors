@@ -12,7 +12,7 @@ export default function Designers() {
       specialty: 'Residential & Modular Design',
       rating: 4.9,
       projects: 120,
-      image: '/images/rahul.jpg'
+      image: '/choudhary-interiors/images/rahul.jpg'
     },
     {
       name: 'Raj choudhary',
@@ -20,7 +20,7 @@ export default function Designers() {
       specialty: 'Commercial & Luxury Spaces',
       rating: 4.8,
       projects: 95,
-      image: '/images/des2.jpg'
+      image: '/choudhary-interiors/images/des2.jpg'
     }
   ]
 
