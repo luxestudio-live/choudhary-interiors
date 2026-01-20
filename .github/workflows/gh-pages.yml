@@ -24,7 +24,7 @@ jobs:
         run: pnpm install
 
       - name: Build static site
-        run: pnpm run build && pnpm exec next export
+        run: pnpm run build
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
