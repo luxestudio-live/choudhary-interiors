@@ -1,4 +1,4 @@
 1:"$Sreact.fragment"
 2:I[42869,["/choudhary-interiors/_next/static/chunks/cdea7944cb5920d7.js","/choudhary-interiors/_next/static/chunks/cc1c88799edfe106.js"],"default"]
 3:I[63587,["/choudhary-interiors/_next/static/chunks/cdea7944cb5920d7.js","/choudhary-interiors/_next/static/chunks/cc1c88799edfe106.js"],"default"]
-0:{"buildId":"fQq3UIgZ6nQn_aEccuAs8","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"brs4CxKrgPyREsdDUQHhX","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
