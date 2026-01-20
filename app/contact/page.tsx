@@ -1,0 +1,270 @@
+'use client'
+
+import React from "react"
+
+import Navigation from '@/components/navigation'
+import Footer from '@/components/footer'
+import { Button } from '@/components/ui/button'
+import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { useState } from 'react'
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    projectType: '',
+    budget: '',
+    message: ''
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log('Form submitted:', formData)
+    alert('Thank you for reaching out! We will contact you soon.')
+    setFormData({ name: '', email: '', phone: '', projectType: '', budget: '', message: '' })
+  }
+
+  const offices = [
+    {
+      city: 'Mumbai',
+      address: '123 Design Lane, Mumbai, Maharashtra 400001',
+      phone: '+91 98765 43210',
+      email: 'hello@choudharyinteriors.com',
+      hours: 'Mon - Sat, 10AM - 6PM'
+    }
+  ]
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <main>
+        {/* Hero Section */}
+        <section className="py-16 sm:py-24 bg-gradient-to-br from-coral to-teal">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 text-balance">
+              Get In Touch
+            </h1>
+            <p className="text-lg text-white/90 max-w-2xl">
+              Ready to transform your space? Reach out to us today for a free consultation.
+            </p>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-16 sm:py-24 bg-soft-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+              {/* Contact Info */}
+              <div className="lg:col-span-1 space-y-8">
+                <div className="bg-white rounded-2xl p-8 shadow-md">
+                  <div className="w-12 h-12 rounded-lg bg-coral/10 flex items-center justify-center mb-4">
+                    <Phone className="w-6 h-6 text-coral" />
+                  </div>
+                  <h3 className="font-bold text-charcoal mb-2">Phone</h3>
+                  <a href="tel:+919876543210" className="text-coral hover:text-coral/80 font-medium">
+                    +91 98765 43210
+                  </a>
+                </div>
+
+                <div className="bg-white rounded-2xl p-8 shadow-md">
+                  <div className="w-12 h-12 rounded-lg bg-teal/10 flex items-center justify-center mb-4">
+                    <Mail className="w-6 h-6 text-teal" />
+                  </div>
+                  <h3 className="font-bold text-charcoal mb-2">Email</h3>
+                  <a href="mailto:hello@choudharyinteriors.com" className="text-teal hover:text-teal/80 font-medium">
+                    hello@choudharyinteriors.com
+                  </a>
+                </div>
+
+                <div className="bg-white rounded-2xl p-8 shadow-md">
+                  <div className="w-12 h-12 rounded-lg bg-yellow/10 flex items-center justify-center mb-4">
+                    <Clock className="w-6 h-6 text-yellow" />
+                  </div>
+                  <h3 className="font-bold text-charcoal mb-2">Hours</h3>
+                  <p className="text-charcoal font-medium">Mon - Sat</p>
+                  <p className="text-muted-foreground">10 AM - 6 PM IST</p>
+                </div>
+              </div>
+
+              {/* Contact Form */}
+              <div className="lg:col-span-2">
+                <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-md">
+                  <h2 className="text-2xl font-bold text-charcoal mb-8">Send us a Message</h2>
+                  
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-charcoal font-medium mb-2">Full Name</label>
+                        <input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
+                          placeholder="John Doe"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-charcoal font-medium mb-2">Email</label>
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
+                          placeholder="john@example.com"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <div>
+                        <label className="block text-charcoal font-medium mb-2">Phone Number</label>
+                        <input
+                          type="tel"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
+                          placeholder="+91 98765 43210"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-charcoal font-medium mb-2">Project Type</label>
+                        <select
+                          name="projectType"
+                          value={formData.projectType}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
+                        >
+                          <option value="">Select a type</option>
+                          <option value="residential">Residential</option>
+                          <option value="commercial">Commercial</option>
+                          <option value="modular">Modular Furniture</option>
+                          <option value="consultation">Consultation Only</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-charcoal font-medium mb-2">Budget Range</label>
+                      <select
+                        name="budget"
+                        value={formData.budget}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
+                      >
+                        <option value="">Select budget range</option>
+                        <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                        <option value="1l-5l">₹1,00,000 - ₹5,00,000</option>
+                        <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
+                        <option value="10l+">₹10,00,000+</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-charcoal font-medium mb-2">Message</label>
+                      <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows={6}
+                        className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral resize-none"
+                        placeholder="Tell us about your project..."
+                      />
+                    </div>
+
+                    <Button type="submit" size="lg" className="w-full bg-coral hover:bg-coral/90 text-white">
+                      Send Message
+                    </Button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            {/* Offices */}
+            <h2 className="text-3xl font-bold text-charcoal mb-12 text-center">Our Office</h2>
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+              {offices.map((office, index) => (
+                <div key={index} className="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
+                  <h3 className="text-2xl font-bold text-charcoal mb-6">{office.city}</h3>
+                  
+                  <div className="space-y-4 text-sm">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-5 h-5 text-coral flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-charcoal">Address</p>
+                        <p className="text-muted-foreground">{office.address}</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <Phone className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-charcoal">Phone</p>
+                        <a href={`tel:${office.phone.replace(/\s/g, '')}`} className="text-teal hover:text-teal/80">
+                          {office.phone}
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <Mail className="w-5 h-5 text-yellow flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-charcoal">Email</p>
+                        <a href={`mailto:${office.email}`} className="text-yellow hover:text-yellow/80">
+                          {office.email}
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <Clock className="w-5 h-5 text-coral flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-charcoal">Hours</p>
+                        <p className="text-muted-foreground">{office.hours}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-16 sm:py-24 bg-gradient-to-br from-charcoal to-charcoal/80">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Looking for a Quick Response?
+            </h2>
+            <p className="text-lg text-white/80 mb-8">
+              Call us directly or send an email, and our team will get back to you within 24 hours.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="tel:+919876543210">
+                <Button size="lg" className="bg-white text-coral hover:bg-white/90">
+                  Call Us Now
+                </Button>
+              </a>
+              <a href="mailto:hello@choudharyinteriors.com">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
+                  Send Email
+                </Button>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  )
+}
