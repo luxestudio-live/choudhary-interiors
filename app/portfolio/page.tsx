@@ -204,30 +204,19 @@ export default function PortfolioPage() {
                           <p className="text-coral font-semibold mb-6">{project.location}</p>
 
                           {/* Project Details */}
-                          <p className="text-charcoal leading-relaxed mb-8">{project.details || project.description}</p>
-
-                          <div className="grid grid-cols-2 gap-6 mb-12 pb-12 border-b border-ash">
-                            <div>
-                              <p className="text-sm text-muted-foreground mb-2">Budget</p>
-                              <p className="text-2xl font-bold text-coral">{project.budget}</p>
-                            </div>
-                            <div>
-                              <p className="text-sm text-muted-foreground mb-2">Timeline</p>
-                              <p className="text-2xl font-bold text-teal">{project.timeline}</p>
-                            </div>
-                          </div>
+                          <p className="text-charcoal leading-relaxed mb-12">{project.details || project.description}</p>
 
                           {/* Gallery Section */}
                           {project.gallery && project.gallery.length > 0 && (
                             <div className="mb-12">
                               <h3 className="text-2xl font-bold text-charcoal mb-6">Project Gallery</h3>
-                              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-max">
+                              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {project.gallery.map((image, index) => (
-                                  <div key={index} className="rounded-lg overflow-hidden shadow-md">
+                                  <div key={index} className="rounded-lg overflow-hidden shadow-md w-full">
                                     <img
                                       src={image}
                                       alt={`Gallery ${index + 1}`}
-                                      className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+                                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                                     />
                                   </div>
                                 ))}
@@ -242,10 +231,10 @@ export default function PortfolioPage() {
                                 <Play className="w-6 h-6 text-coral fill-coral" />
                                 Watch the Project Transformation
                               </h3>
-                              <div className="rounded-lg overflow-hidden shadow-lg bg-charcoal max-w-sm mx-auto">
+                              <div className="rounded-lg overflow-hidden shadow-lg bg-charcoal w-full">
                                 <video
                                   width="100%"
-                                  height="100%"
+                                  height="auto"
                                   controls
                                   className="w-full h-auto"
                                 >
