@@ -75,6 +75,19 @@ export default function EnquiriesPage() {
     return badges[status as keyof typeof badges] || badges.new;
   };
 
+  const formatBudget = (budget?: string) => {
+    if (!budget) return '';
+    const budgetLabels: Record<string, string> = {
+      '1l-3l': '₹1,00,000 - ₹3,00,000',
+      '3l-6l': '₹3,00,000 - ₹6,00,000',
+      '6l-9l': '₹6,00,000 - ₹9,00,000',
+      '9l-12l': '₹9,00,000 - ₹12,00,000',
+      '12l-15l': '₹12,00,000 - ₹15,00,000',
+      '15l+': '₹15,00,000+'
+    };
+    return budgetLabels[budget] || budget;
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
@@ -194,7 +207,7 @@ export default function EnquiriesPage() {
                     )}
                     {enquiry.budget && (
                       <span className="px-3 py-1 bg-teal/10 text-teal rounded-lg text-sm font-medium">
-                        {enquiry.budget}
+                        {formatBudget(enquiry.budget)}
                       </span>
                     )}
                   </div>
