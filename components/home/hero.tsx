@@ -64,7 +64,7 @@ export default function Hero() {
           {/* Right image */}
           <div className="relative h-96 sm:h-full min-h-96 rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-105">
             <img
-              src="/choudhary-interiors/images/hero.jpg"
+              src="/images/hero.jpg"
               alt="Modern luxury living room interior design"
               className="w-full h-full object-cover"
             />

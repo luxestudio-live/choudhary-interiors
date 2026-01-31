@@ -9,37 +9,37 @@ export default function Services() {
       icon: Home,
       title: 'Residential Design',
       description: 'Transform your home into a stunning space that reflects your personality and lifestyle',
-      image: '/choudhary-interiors/images/living.jpg'
+      image: '/images/living.jpg'
     },
     {
       icon: Building2,
       title: 'Commercial Interiors',
       description: 'Create productive, professional spaces that elevate your corporate environment',
-      image: '/choudhary-interiors/images/office.jpg'
+      image: '/images/office.jpg'
     },
     {
       icon: Sofa,
       title: 'Modular Kitchen',
       description: 'Custom modular kitchens designed for functionality and style',
-      image: '/choudhary-interiors/images/kitchen.jpg'
+      image: '/images/kitchen.jpg'
     },
     {
       icon: Wind,
       title: 'False Ceiling & Lighting',
       description: 'Elegant ceiling designs with smart lighting solutions',
-      image: '/choudhary-interiors/images/bedroom.jpg'
+      image: '/images/bedroom.jpg'
     },
     {
       icon: Users,
       title: 'Wardrobe & Storage',
       description: 'Space-saving wardrobes and storage tailored to your needs',
-      image: '/choudhary-interiors/images/wardrobe.jpg'
+      image: '/images/wardrobe.jpg'
     },
     {
       icon: FileText,
       title: 'Civil Work',
       description: 'End-to-end civil work to prepare your space perfectly',
-      image: '/choudhary-interiors/images/proj2.jpg'
+      image: '/images/proj2.jpg'
     }
   ]
 

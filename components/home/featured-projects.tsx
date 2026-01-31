@@ -8,25 +8,25 @@ export default function FeaturedProjects() {
     {
       title: 'Modern 3 BHK Apartment',
       category: 'Residential',
-      image: '/choudhary-interiors/images/proj1.jpg',
+      image: '/images/proj1.jpg',
       location: 'Mumbai'
     },
     {
       title: 'Luxury Penthouse',
       category: 'Residential',
-      image: '/choudhary-interiors/images/proj2.jpg',
+      image: '/images/proj2.jpg',
       location: 'Mumbai'
     },
     {
       title: 'Cozy 2 BHK Home',
       category: 'Residential',
-      image: '/choudhary-interiors/images/proj3.jpg',
+      image: '/images/proj3.jpg',
       location: 'Mumbai'
     },
     {
       title: 'Elegant Villa Design',
       category: 'Residential',
-      image: '/choudhary-interiors/images/proj4.jpg',
+      image: '/images/proj4.jpg',
       location: 'Mumbai'
     }
   ]

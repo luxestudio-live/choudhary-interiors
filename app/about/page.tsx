@@ -85,7 +85,7 @@ export default function AboutPage() {
               </div>
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="/choudhary-interiors/images/team.jpg" 
+                  src="/images/team.jpg" 
                   alt="Rahul and Raj choudhary, choudhary Interiors founders"
                   className="w-full h-full object-cover"
                 />

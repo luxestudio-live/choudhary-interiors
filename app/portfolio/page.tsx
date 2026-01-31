@@ -19,22 +19,22 @@ export default function PortfolioPage() {
       title: '4 BHK Premium Luxury Home',
       category: 'Residential',
       location: 'Nahur, Mumbai',
-      image: '/choudhary-interiors/pf7.jpeg',
+      image: '/pf7.jpeg',
       description: 'Stunning 4 BHK luxury home featuring comprehensive interior design with contemporary aesthetics and premium finishes throughout all living spaces.',
       budget: '₹35 Lakhs',
       timeline: '5 months',
       gallery: [
-        '/choudhary-interiors/pf1.jpeg',
-        '/choudhary-interiors/pf2.jpeg',
-        '/choudhary-interiors/pf3.jpeg',
-        '/choudhary-interiors/pf4.jpeg',
-        '/choudhary-interiors/pf5.jpeg',
-        '/choudhary-interiors/pf6.jpeg',
-        '/choudhary-interiors/pf7.jpeg',
-        '/choudhary-interiors/pf8.jpeg',
-        '/choudhary-interiors/p1-video.mp4'
+        '/pf1.jpeg',
+        '/pf2.jpeg',
+        '/pf3.jpeg',
+        '/pf4.jpeg',
+        '/pf5.jpeg',
+        '/pf6.jpeg',
+        '/pf7.jpeg',
+        '/pf8.jpeg',
+        '/p1-video.mp4'
       ],
-      video: '/choudhary-interiors/p1-video.mp4',
+      video: '/p1-video.mp4',
       details: 'This comprehensive 4 BHK residential project in Nahur represents our commitment to excellence in luxury home design. We transformed this entire home with careful attention to detail, superior craftsmanship, and innovative design solutions across all spaces including bedrooms, living areas, kitchen, and more.'
     },
     {
@@ -42,24 +42,24 @@ export default function PortfolioPage() {
       title: '3 BHK Modern Home Design',
       category: 'Residential',
       location: 'Dombivali, Thane',
-      image: '/choudhary-interiors/po5.jpeg',
+      image: '/po5.jpeg',
       description: 'Beautifully designed 3 BHK residential space featuring modern interiors with optimal space utilization and premium finishing.',
       budget: '₹25 Lakhs',
       timeline: '4 months',
       gallery: [
-        '/choudhary-interiors/po1.jpeg',
-        '/choudhary-interiors/po2.jpeg',
-        '/choudhary-interiors/po3.jpeg',
-        '/choudhary-interiors/po4.jpeg',
-        '/choudhary-interiors/po5.jpeg',
-        '/choudhary-interiors/po6.jpeg',
-        '/choudhary-interiors/po7.jpeg',
-        '/choudhary-interiors/po8.jpeg',
-        '/choudhary-interiors/po9.jpeg',
-        '/choudhary-interiors/po10.jpeg',
-        '/choudhary-interiors/po-video.mp4'
+        '/po1.jpeg',
+        '/po2.jpeg',
+        '/po3.jpeg',
+        '/po4.jpeg',
+        '/po5.jpeg',
+        '/po6.jpeg',
+        '/po7.jpeg',
+        '/po8.jpeg',
+        '/po9.jpeg',
+        '/po10.jpeg',
+        '/po-video.mp4'
       ],
-      video: '/choudhary-interiors/po-video.mp4',
+      video: '/po-video.mp4',
       details: 'This 3 BHK residential project in Dombivali showcases our expertise in creating functional and aesthetically pleasing modern homes. We transformed this property with careful space planning, contemporary design elements, and premium materials to create a comfortable living environment.'
     },
     {
@@ -67,18 +67,18 @@ export default function PortfolioPage() {
       title: '2 BHK Renovation Project',
       category: 'Renovation',
       location: 'Bhandup, Mumbai',
-      image: '/choudhary-interiors/images/pf1.jpg',
+      image: '/images/pf1.jpg',
       description: 'Complete 2 BHK renovation featuring modern interiors, updated fixtures, and improved functionality.',
       gallery: [
-        '/choudhary-interiors/por1.mp4',
-        '/choudhary-interiors/por2.mp4',
-        '/choudhary-interiors/por3.mp4',
-        '/choudhary-interiors/por4.mp4',
-        '/choudhary-interiors/por5.mp4',
-        '/choudhary-interiors/por6.mp4',
-        '/choudhary-interiors/por7.mp4'
+        '/por1.mp4',
+        '/por2.mp4',
+        '/por3.mp4',
+        '/por4.mp4',
+        '/por5.mp4',
+        '/por6.mp4',
+        '/por7.mp4'
       ],
-      video: '/choudhary-interiors/por1.mp4',
+      video: '/por1.mp4',
       details: 'This 2 BHK renovation project in Bhandup demonstrates our expertise in transforming existing spaces. We modernized the layout, updated all fixtures and fittings, and introduced contemporary design elements to create a fresh, functional living space that meets modern lifestyle needs.'
     },
     {
@@ -86,16 +86,16 @@ export default function PortfolioPage() {
       title: '1 BHK Interior Project',
       category: 'Residential',
       location: 'Bhandup West, Mumbai',
-      image: '/choudhary-interiors/port1.jpeg',
+      image: '/port1.jpeg',
       description: 'Compact 1 BHK interior with smart storage, warm finishes, and a functional layout.',
       gallery: [
-        '/choudhary-interiors/port1.jpeg',
-        '/choudhary-interiors/port2.jpeg',
-        '/choudhary-interiors/port-video1.mp4',
-        '/choudhary-interiors/port-video2.mp4',
-        '/choudhary-interiors/port-video3.mp4'
+        '/port1.jpeg',
+        '/port2.jpeg',
+        '/port-video1.mp4',
+        '/port-video2.mp4',
+        '/port-video3.mp4'
       ],
-      video: '/choudhary-interiors/port-video1.mp4',
+      video: '/port-video1.mp4',
       details: 'This 1 BHK project in Bhandup West focuses on space optimization and a clean, modern aesthetic. We combined practical storage, durable materials, and cozy finishes to make the apartment feel open, bright, and comfortable while keeping daily use effortless.'
     },
     {
@@ -103,19 +103,19 @@ export default function PortfolioPage() {
       title: '2 BHK Interior Project',
       category: 'Residential',
       location: 'Bhandup, Mumbai',
-      image: '/choudhary-interiors/project10.jpeg',
+      image: '/project10.jpeg',
       description: 'Modern 2 BHK interiors with balanced aesthetics, smart storage, and comfortable living spaces.',
       gallery: [
-        '/choudhary-interiors/project1.jpeg',
-        '/choudhary-interiors/project2.jpeg',
-        '/choudhary-interiors/project3.jpeg',
-        '/choudhary-interiors/project4.jpeg',
-        '/choudhary-interiors/project5.jpeg',
-        '/choudhary-interiors/project6.jpeg',
-        '/choudhary-interiors/project7.jpeg',
-        '/choudhary-interiors/project8.jpeg',
-        '/choudhary-interiors/project9.jpeg',
-        '/choudhary-interiors/project10.jpeg'
+        '/project1.jpeg',
+        '/project2.jpeg',
+        '/project3.jpeg',
+        '/project4.jpeg',
+        '/project5.jpeg',
+        '/project6.jpeg',
+        '/project7.jpeg',
+        '/project8.jpeg',
+        '/project9.jpeg',
+        '/project10.jpeg'
       ],
       details: 'This 2 BHK project in Bhandup showcases thoughtful space planning with warm finishes and functional storage. We focused on creating a cohesive look across the living room, bedrooms, and kitchen while maintaining a bright, inviting feel.'
     },
@@ -124,10 +124,10 @@ export default function PortfolioPage() {
       title: '3 BHK Interior Project',
       category: 'Residential',
       location: 'Dombivali, Mumbai',
-      image: '/choudhary-interiors/portfolio6.jpeg',
+      image: '/portfolio6.jpeg',
       description: 'Elegant 3 BHK interiors with cohesive styling, smart storage, and functional layouts.',
       gallery: [
-        '/choudhary-interiors/portfolio6.jpeg'
+        '/portfolio6.jpeg'
       ],
       details: 'This 3 BHK project in Dombivali focuses on creating a balanced, modern look across all rooms with thoughtful storage solutions and warm, livable finishes. The design delivers comfort, functionality, and a cohesive aesthetic throughout the home.'
     },
@@ -136,18 +136,18 @@ export default function PortfolioPage() {
       title: 'Project Highlights (Mixed)',
       category: 'Highlights',
       location: 'Mumbai',
-      image: '/choudhary-interiors/random1.jpeg',
+      image: '/random1.jpeg',
       description: 'A curated mix of snapshots from different projects and spaces we have completed.',
       gallery: [
-        '/choudhary-interiors/random1.jpeg',
-        '/choudhary-interiors/random2.jpeg',
-        '/choudhary-interiors/random3.jpeg',
-        '/choudhary-interiors/random4.jpeg',
-        '/choudhary-interiors/random5.jpeg',
-        '/choudhary-interiors/random6.jpeg',
-        '/choudhary-interiors/random7.jpeg',
-        '/choudhary-interiors/random8.jpeg',
-        '/choudhary-interiors/random9.jpeg'
+        '/random1.jpeg',
+        '/random2.jpeg',
+        '/random3.jpeg',
+        '/random4.jpeg',
+        '/random5.jpeg',
+        '/random6.jpeg',
+        '/random7.jpeg',
+        '/random8.jpeg',
+        '/random9.jpeg'
       ],
       details: 'This gallery showcases a mix of design highlights from multiple projects, featuring a variety of styles, finishes, and space types. It offers a quick look at our versatility and attention to detail across different client requirements.'
     }

@@ -9,7 +9,7 @@ export default function ServicesPage() {
     {
       title: 'Residential Interior Design',
       description: 'Transform your home into a stunning living space that perfectly reflects your lifestyle and personality.',
-      image: '/choudhary-interiors/images/living.jpg',
+      image: '/images/living.jpg',
       features: [
         'Complete home interior design',
         'Bedroom & living area design',
@@ -23,7 +23,7 @@ export default function ServicesPage() {
     {
       title: 'Commercial Office Interiors',
       description: 'Create productive, professional spaces that enhance employee experience and reflect your brand identity.',
-      image: '/choudhary-interiors/images/office.jpg',
+      image: '/images/office.jpg',
       features: [
         'Office layout planning',
         'Reception & meeting areas',
@@ -37,7 +37,7 @@ export default function ServicesPage() {
     {
       title: 'Modular Kitchen Solutions',
       description: 'Custom modular kitchens that blend aesthetics with everyday functionality.',
-      image: '/choudhary-interiors/images/kitchen.jpg',
+      image: '/images/kitchen.jpg',
       features: [
         'Custom kitchen layout design',
         'Cabinetry & lofts',
@@ -51,7 +51,7 @@ export default function ServicesPage() {
     {
       title: 'False Ceiling & Lighting',
       description: 'Stylish ceiling designs with layered lighting for the perfect ambience.',
-      image: '/choudhary-interiors/images/bedroom.jpg',
+      image: '/images/bedroom.jpg',
       features: [
         'Gypsum & POP ceiling work',
         'Cove & spot lighting',
@@ -65,7 +65,7 @@ export default function ServicesPage() {
     {
       title: 'Wardrobe & Storage',
       description: 'Space-saving wardrobes and storage units tailored to your room and lifestyle.',
-      image: '/choudhary-interiors/images/wardrobe.jpg',
+      image: '/images/wardrobe.jpg',
       features: [
         'Sliding & hinged wardrobes',
         'Loft & overhead storage',
@@ -79,7 +79,7 @@ export default function ServicesPage() {
     {
       title: 'Civil Work',
       description: 'Reliable civil work to prepare and perfect your interiors before finishing.',
-      image: '/choudhary-interiors/images/proj2.jpg',
+      image: '/images/proj2.jpg',
       features: [
         'Demolition & masonry',
         'Plumbing & electrical coordination',
