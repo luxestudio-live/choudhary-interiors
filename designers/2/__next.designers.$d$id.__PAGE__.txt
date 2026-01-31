@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[89836,["/choudhary-interiors/_next/static/chunks/3337476739009024.js","/choudhary-interiors/_next/static/chunks/cc1c88799edfe106.js"],"OutletBoundary"]
-3:"$Sreact.suspense"
-0:{"buildId":"brs4CxKrgPyREsdDUQHhX","rsc":["$","$1","c",{"children":[["$","div",null,{"children":"Designer not found"}],[["$","script","script-0",{"src":"/choudhary-interiors/_next/static/chunks/3337476739009024.js","async":true}],["$","script","script-1",{"src":"/choudhary-interiors/_next/static/chunks/605957509d890a6f.js","async":true}]],["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
-4:null
