@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { FolderKanban, MessageSquare, Star, TrendingUp } from 'lucide-react';
+import { Folder, MessageSquare, Star, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AdminDashboard() {
@@ -42,7 +42,7 @@ export default function AdminDashboard() {
     {
       title: 'Total Projects',
       value: stats.projects,
-      icon: FolderKanban,
+      icon: Folder,
       color: 'from-coral to-coral/80',
       href: '/admin/dashboard/projects',
     },
@@ -98,7 +98,7 @@ export default function AdminDashboard() {
             href="/admin/dashboard/projects"
             className="flex items-center gap-3 p-4 bg-coral/10 hover:bg-coral/20 rounded-lg transition-all group"
           >
-            <FolderKanban className="w-6 h-6 text-coral group-hover:scale-110 transition-transform" />
+            <Folder className="w-6 h-6 text-coral group-hover:scale-110 transition-transform" />
             <div>
               <p className="font-semibold text-charcoal">Add New Project</p>
               <p className="text-sm text-muted-foreground">Upload portfolio item</p>

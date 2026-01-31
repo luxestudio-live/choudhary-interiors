@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { collection, addDoc, updateDoc, deleteDoc, doc, getDocs, orderBy, query } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
-import { Plus, Edit2, Trash2, Image as ImageIcon, Video, Loader2, X, Upload } from 'lucide-react';
+import { Plus, Edit2, Trash2, Image as ImageIcon, Video, Loader2, X, Upload, Folder } from 'lucide-react';
 import { CldUploadWidget } from 'next-cloudinary';
 
 interface Project {
@@ -449,7 +449,7 @@ export default function ProjectsPage() {
 
         {projects.length === 0 && (
           <div className="col-span-full text-center py-12">
-            <FolderKanban className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
+            <Folder className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
             <p className="text-muted-foreground">No projects yet. Add your first project!</p>
           </div>
         )}
