@@ -15,7 +15,7 @@ export default function PortfolioPage() {
       title: '4BHK Premium Luxury Home',
       category: 'Residential',
       location: 'Nahur, Mumbai',
-      image: '/choudhary-interiors/pf9.jpeg',
+      image: '/choudhary-interiors/pf7.jpeg',
       description: 'Stunning 4BHK luxury home featuring comprehensive interior design with contemporary aesthetics and premium finishes throughout all living spaces.',
       budget: '₹35 Lakhs',
       timeline: '5 months',
