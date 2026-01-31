@@ -12,7 +12,6 @@ const services = [
 
 const company = [
   { name: "About Us", href: "/about" },
-  { name: "Our Designers", href: "/designers" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Pricing", href: "/pricing" },
   { name: "Contact", href: "/contact" },
@@ -95,8 +94,9 @@ function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-teal" />
                 <span className="text-sm text-gray-400">
-                  123 Design Street, Creative Hub,<br />
-                  New Delhi - 110001
+                  Shop no. 2, Badwaik chawl, Lal Bahadur Shastri Marg,<br />
+                  opp. Jain mandir, Kukreja, Govind Nagar, Bhandup West,<br />
+                  Mumbai, Maharashtra 400078
                 </span>
               </li>
               <li>

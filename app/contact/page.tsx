@@ -258,7 +258,7 @@ export default function ContactPage() {
               {/* Map Embed */}
               <div className="rounded-2xl overflow-hidden shadow-lg h-96 lg:h-full min-h-96">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5355149829606!2d72.8479!3d19.0760!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9fbd9c7c7c7%3A0x0!2sDesign%20Lane%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1706693400000"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.4829827726444!2d72.93387757588308!3d19.14429058207064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b91b7c7d0c0d%3A0x0!2zMTnCsDA4JzM5LjQiTiA3MsKwNTYnMTAuMCJF!5e0!3m2!1sen!2sin!4v1706799999999!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -277,7 +277,7 @@ export default function ContactPage() {
                       <MapPin className="w-6 h-6 text-coral flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-semibold text-charcoal mb-1">Address</p>
-                        <p className="text-muted-foreground">123 Design Lane, Mumbai, Maharashtra 400001, India</p>
+                        <p className="text-muted-foreground">Shop no. 2, Badwaik chawl, Lal Bahadur Shastri Marg, opp. Jain mandir, Kukreja, Govind Nagar, Bhandup West, Mumbai, Maharashtra 400078</p>
                       </div>
                     </div>
 
@@ -296,14 +296,14 @@ export default function ContactPage() {
                       <div>
                         <p className="font-semibold text-charcoal mb-1">Hours</p>
                         <p className="text-muted-foreground">Monday - Saturday</p>
-                        <p className="text-muted-foreground">10:00 AM - 6:00 PM IST</p>
+                        <p className="text-muted-foreground">9:00 AM - 9:00 PM IST</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <a 
-                  href="https://share.google/bSTP5khFI4g821gqm" 
+                  href="https://maps.app.goo.gl/fGSQzT1v7Jz4C4m2A" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >

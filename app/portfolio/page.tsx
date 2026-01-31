@@ -228,60 +228,55 @@ export default function PortfolioPage() {
                           <p className="text-charcoal leading-relaxed mb-12">{project.details || project.description}</p>
 
                           {/* Gallery Section */}
-                          {project.gallery && project.gallery.length > 0 && (
-                            <div className="mb-12">
-                              <h3 className="text-2xl font-bold text-charcoal mb-6">Project Gallery</h3>
-                              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                {project.gallery.map((item, index) => {
-                                  const isVideo = item.toLowerCase().endsWith('.mp4')
+                          {project.gallery && project.gallery.length > 0 && (() => {
+                            const photos = project.gallery.filter(item => !item.toLowerCase().endsWith('.mp4'))
+                            const videos = project.gallery.filter(item => item.toLowerCase().endsWith('.mp4'))
 
-                                  return (
-                                    <div key={index} className="rounded-lg overflow-hidden shadow-md w-full">
-                                      {isVideo ? (
-                                        <div className="bg-charcoal w-full">
+                            return (
+                              <div className="mb-12">
+                                <h3 className="text-2xl font-bold text-charcoal mb-8">Gallery</h3>
+                                
+                                {/* Photos Section */}
+                                {photos.length > 0 && (
+                                  <div className="mb-10">
+                                    <h4 className="text-xl font-semibold text-charcoal mb-4">Photos</h4>
+                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                      {photos.map((photo, index) => (
+                                        <div key={index} className="rounded-lg overflow-hidden shadow-md w-full">
+                                          <img
+                                            src={photo}
+                                            alt={`Photo ${index + 1}`}
+                                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                          />
+                                        </div>
+                                      ))}
+                                    </div>
+                                  </div>
+                                )}
+
+                                {/* Videos Section */}
+                                {videos.length > 0 && (
+                                  <div>
+                                    <h4 className="text-xl font-semibold text-charcoal mb-4">Videos</h4>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                      {videos.map((video, index) => (
+                                        <div key={index} className="rounded-lg overflow-hidden shadow-md bg-charcoal w-full">
                                           <video
                                             controls
                                             preload="metadata"
                                             className="w-full h-auto"
                                           >
-                                            <source src={item} type="video/mp4" />
+                                            <source src={video} type="video/mp4" />
                                             Your browser does not support the video tag.
                                           </video>
                                         </div>
-                                      ) : (
-                                        <img
-                                          src={item}
-                                          alt={`Gallery ${index + 1}`}
-                                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                                        />
-                                      )}
+                                      ))}
                                     </div>
-                                  )
-                                })}
+                                  </div>
+                                )}
                               </div>
-                            </div>
-                          )}
-
-                          {/* Video Section */}
-                          {project.video && (
-                            <div className="mb-12">
-                              <h3 className="text-2xl font-bold text-charcoal mb-6 flex items-center gap-3">
-                                <Play className="w-6 h-6 text-coral fill-coral" />
-                                Watch the Project Transformation
-                              </h3>
-                              <div className="rounded-lg overflow-hidden shadow-lg bg-charcoal w-full">
-                                <video
-                                  width="100%"
-                                  height="auto"
-                                  controls
-                                  className="w-full h-auto"
-                                >
-                                  <source src={project.video} type="video/mp4" />
-                                  Your browser does not support the video tag.
-                                </video>
-                              </div>
-                            </div>
-                          )}
+                            )
+                          })()}
 
                           {/* CTA */}
                           <Link href="/contact">
