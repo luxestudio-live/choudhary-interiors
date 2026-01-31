@@ -1,28 +1,43 @@
 "use client";
+import { useState, useEffect } from 'react';
 import { Star } from 'lucide-react'
 import { ScrollFadeIn } from '@/components/ui/scroll-fade-in'
+import { getReviews } from '@/lib/firestore-helpers'
+
+// Fallback testimonials
+const defaultTestimonials = [
+  {
+    name: 'Nadeem Khan',
+    content: 'Choudhary ji was very cooperative and understanding. He guided us very clearly and design was so beautiful, modular kitchen and living room design was great. Highly recommend',
+    rating: 5,
+    icon: '👨‍💼'
+  },
+  {
+    name: 'Ayesha',
+    content: 'Our living room and bedroom interiors were done by Choudhary Interiors. Beautiful designs, good materials, and neat workmanship',
+    rating: 5,
+    icon: '👩‍🦰'
+  },
+  {
+    name: 'Saif',
+    content: 'We got our office interior designed by Choudhary Interiors and the results were impressive. Modern layout, good space utilization, and professional finishing. Highly recommended for commercial and office interior design in Mumbai',
+    rating: 5,
+    icon: '👨‍💻'
+  }
+]
 
 export default function Testimonials() {
-  const testimonials = [
-    {
-      name: 'Nadeem Khan',
-      content: 'Choudhary ji was very cooperative and understanding. He guided us very clearly and design was so beautiful, modular kitchen and living room design was great. Highly recommend',
-      rating: 5,
-      icon: '👨‍💼'
-    },
-    {
-      name: 'Ayesha',
-      content: 'Our living room and bedroom interiors were done by Choudhary Interiors. Beautiful designs, good materials, and neat workmanship',
-      rating: 5,
-      icon: '👩‍🦰'
-    },
-    {
-      name: 'Saif',
-      content: 'We got our office interior designed by Choudhary Interiors and the results were impressive. Modern layout, good space utilization, and professional finishing. Highly recommended for commercial and office interior design in Mumbai',
-      rating: 5,
-      icon: '👨‍💻'
+  const [testimonials, setTestimonials] = useState(defaultTestimonials)
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      const reviews = await getReviews()
+      if (reviews.length > 0) {
+        setTestimonials(reviews)
+      }
     }
-  ]
+    fetchTestimonials()
+  }, [])
 
   return (
     <ScrollFadeIn>

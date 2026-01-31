@@ -7,6 +7,8 @@ import Footer from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { useState } from 'react'
+import { collection, addDoc } from 'firebase/firestore'
+import { db } from '@/lib/firebase'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -17,17 +19,31 @@ export default function ContactPage() {
     budget: '',
     message: ''
   })
+  const [submitting, setSubmitting] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thank you for reaching out! We will contact you soon.')
-    setFormData({ name: '', email: '', phone: '', projectType: '', budget: '', message: '' })
+    setSubmitting(true)
+
+    try {
+      await addDoc(collection(db, 'enquiries'), {
+        ...formData,
+        status: 'new',
+        createdAt: new Date(),
+      })
+      alert('Thank you for reaching out! We will contact you soon.')
+      setFormData({ name: '', email: '', phone: '', projectType: '', budget: '', message: '' })
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('There was an error submitting your enquiry. Please try again or contact us directly.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const offices = [
@@ -198,13 +214,16 @@ export default function ContactPage() {
 
                     <button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-coral via-coral to-coral/80 hover:from-coral/90 hover:via-coral/85 hover:to-coral/70 text-white font-semibold py-4 rounded-lg transition-all hover:shadow-2xl hover:-translate-y-1 group transform"
+                      disabled={submitting}
+                      className="w-full bg-gradient-to-r from-coral via-coral to-coral/80 hover:from-coral/90 hover:via-coral/85 hover:to-coral/70 text-white font-semibold py-4 rounded-lg transition-all hover:shadow-2xl hover:-translate-y-1 group transform disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <span className="flex items-center justify-center gap-2">
-                        Send Message
-                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                        </svg>
+                        {submitting ? 'Sending...' : 'Send Message'}
+                        {!submitting && (
+                          <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
+                        )}
                       </span>
                     </button>
                   </form>
