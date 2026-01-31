@@ -156,16 +156,41 @@ export default function ProjectsPage() {
     }));
   };
 
-  const addVideoUrl = () => {
-    const url = prompt('Enter YouTube video URL (e.g., https://www.youtube.com/watch?v=VIDEO_ID):');
-    if (url) {
-      // Extract YouTube video ID
-      let videoId = '';
-      if (url.includes('youtube.com/watch?v=')) {
-        videoId = url.split('v=')[1]?.split('&')[0];
-      } else if (url.includes('youtu.be/')) {
-        videoId = url.split('youtu.be/')[1]?.split('?')[0];
+  const extractYouTubeId = (input: string) => {
+    const trimmed = input.trim();
+    // Allow direct video ID
+    if (/^[a-zA-Z0-9_-]{11}$/.test(trimmed)) return trimmed;
+
+    try {
+      const url = new URL(trimmed);
+      const host = url.hostname.replace('www.', '');
+
+      if (host === 'youtu.be') {
+        return url.pathname.split('/')[1] || '';
       }
+
+      if (host.endsWith('youtube.com')) {
+        if (url.searchParams.get('v')) {
+          return url.searchParams.get('v') || '';
+        }
+
+        const pathParts = url.pathname.split('/').filter(Boolean);
+        if (pathParts[0] === 'shorts' && pathParts[1]) return pathParts[1];
+        if (pathParts[0] === 'embed' && pathParts[1]) return pathParts[1];
+        if (pathParts[0] === 'v' && pathParts[1]) return pathParts[1];
+        if (pathParts[0] === 'live' && pathParts[1]) return pathParts[1];
+      }
+    } catch {
+      // ignore parse errors
+    }
+
+    return '';
+  };
+
+  const addVideoUrl = () => {
+    const url = prompt('Enter YouTube URL (watch, shorts, embed, youtu.be, or video ID):');
+    if (url) {
+      const videoId = extractYouTubeId(url);
 
       if (videoId) {
         const embedUrl = `https://www.youtube.com/embed/${videoId}`;
