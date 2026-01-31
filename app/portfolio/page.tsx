@@ -258,7 +258,7 @@ export default function PortfolioPage() {
 
                   {/* Modal Content */}
                   <div className="p-8 relative z-10">
-                    {projects
+                    {allProjects
                       .filter((p) => p.id === selectedProject)
                       .map((project) => (
                         <div key={project.id}>
