@@ -160,7 +160,7 @@ export default function ContactPage() {
                           value={formData.phone}
                           onChange={handleChange}
                           className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral group-hover:border-coral/50 transition-colors placeholder:text-gray-400"
-                          placeholder="+91 98765 43210"
+                          placeholder="+91 88283 80687"
                         />
                       </div>
                       <div className="group">
@@ -336,7 +336,7 @@ export default function ContactPage() {
               Call us directly or send an email, and our team will get back to you within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+919876543210">
+              <a href="tel:+918828380687">
                 <Button size="lg" className="bg-white text-coral hover:bg-white/90">
                   Call Us Now
                 </Button>
