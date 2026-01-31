@@ -6,7 +6,7 @@ import { ScrollFadeIn } from '@/components/ui/scroll-fade-in'
 export default function FeaturedProjects() {
   const projects = [
     {
-      title: 'Modern 3BHK Apartment',
+      title: 'Modern 3 BHK Apartment',
       category: 'Residential',
       image: '/choudhary-interiors/images/proj1.jpg',
       location: 'Mumbai'
@@ -18,7 +18,7 @@ export default function FeaturedProjects() {
       location: 'Mumbai'
     },
     {
-      title: 'Cozy 2BHK Home',
+      title: 'Cozy 2 BHK Home',
       category: 'Residential',
       image: '/choudhary-interiors/images/proj3.jpg',
       location: 'Mumbai'

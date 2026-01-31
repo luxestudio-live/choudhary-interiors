@@ -94,6 +94,13 @@ function Navigation() {
           >
             Pricing
           </Link>
+          <Link 
+            href="/contact" 
+            className="text-sm font-medium text-charcoal transition-colors hover:text-coral"
+            onClick={() => handleNavClick('/contact')}
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Desktop CTA */}
