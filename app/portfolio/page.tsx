@@ -171,6 +171,7 @@ export default function PortfolioPage() {
     ...hardcodedProjects,
     ...firestoreProjects.map((proj) => ({
       ...proj,
+      image: proj.images?.[0] || proj.image || '/placeholder.svg',
       gallery: proj.images || [],
       video: proj.videos?.[0] || null
     }))
