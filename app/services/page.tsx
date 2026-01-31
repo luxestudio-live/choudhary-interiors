@@ -18,7 +18,7 @@ export default function ServicesPage() {
         'False ceiling & lighting planning',
         'On-site installation management'
       ],
-      price: 'Starting at ₹50,000'
+      price: 'Custom Quote'
     },
     {
       title: 'Commercial Office Interiors',
@@ -46,7 +46,7 @@ export default function ServicesPage() {
         'Appliance integration',
         'Expert installation'
       ],
-      price: 'Starting at ₹75,000'
+      price: 'Custom Quote'
     },
     {
       title: 'False Ceiling & Lighting',
@@ -60,7 +60,7 @@ export default function ServicesPage() {
         'Acoustic options',
         'Finishing & painting'
       ],
-      price: 'Starting at ₹30,000'
+      price: 'Custom Quote'
     },
     {
       title: 'Wardrobe & Storage',
@@ -74,7 +74,7 @@ export default function ServicesPage() {
         'Mirror & glass options',
         'On-site installation'
       ],
-      price: 'Starting at ₹45,000'
+      price: 'Custom Quote'
     },
     {
       title: 'Civil Work',
@@ -88,7 +88,7 @@ export default function ServicesPage() {
         'Partition work',
         'Site supervision'
       ],
-      price: 'Starting at ₹40,000'
+      price: 'Custom Quote'
     }
   ]
 

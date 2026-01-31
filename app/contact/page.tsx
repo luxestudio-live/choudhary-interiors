@@ -165,10 +165,12 @@ export default function ContactPage() {
                         className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
                       >
                         <option value="">Select budget range</option>
-                        <option value="50k-1l">₹50,000 - ₹1,00,000</option>
-                        <option value="1l-5l">₹1,00,000 - ₹5,00,000</option>
-                        <option value="5l-10l">₹5,00,000 - ₹10,00,000</option>
-                        <option value="10l+">₹10,00,000+</option>
+                        <option value="1l-3l">₹1,00,000 - ₹3,00,000</option>
+                        <option value="3l-6l">₹3,00,000 - ₹6,00,000</option>
+                        <option value="6l-9l">₹6,00,000 - ₹9,00,000</option>
+                        <option value="9l-12l">₹9,00,000 - ₹12,00,000</option>
+                        <option value="12l-15l">₹12,00,000 - ₹15,00,000</option>
+                        <option value="15l+">₹15,00,000+</option>
                       </select>
                     </div>
 

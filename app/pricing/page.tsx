@@ -7,23 +7,8 @@ import Link from 'next/link'
 export default function PricingPage() {
   const packages = [
     {
-      name: 'False Ceiling & Lighting',
-      price: '₹15,000',
-      description: 'Ideal for elevating ambience with modern ceiling and lighting',
-      duration: 'Per room',
-      features: [
-        'Ceiling design options',
-        'Lighting layout plan',
-        'Cove & spot lighting',
-        'Material guidance',
-        'Execution timeline',
-        'On-site support'
-      ],
-      popular: false
-    },
-    {
       name: 'Design Package',
-      price: '₹50,000',
+      price: '₹2,00,000+',
       description: 'Ideal for single rooms or small spaces',
       duration: 'Per room',
       features: [
@@ -40,7 +25,7 @@ export default function PricingPage() {
     },
     {
       name: 'Premium Package',
-      price: '₹2,00,000+',
+      price: '₹10,00,000+',
       description: 'Comprehensive design for entire homes',
       duration: 'Full home',
       features: [
@@ -76,15 +61,6 @@ export default function PricingPage() {
     }
   ]
 
-  const addOns = [
-    { name: 'False Ceiling & Lighting', price: '₹12,000', description: 'Per room' },
-    { name: 'Modular Kitchen Design', price: '₹25,000', description: 'Per kitchen' },
-    { name: 'Wardrobe & Storage', price: '₹18,000', description: 'Per unit' },
-    { name: 'Civil Work', price: '₹20,000', description: 'Per room' },
-    { name: 'Material Sourcing', price: '₹15,000', description: 'Service charge' },
-    { name: 'Site Supervision', price: '₹2,500/day', description: 'Per day' }
-  ]
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -109,7 +85,7 @@ export default function PricingPage() {
               Select the perfect design package that suits your needs and budget.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
               {packages.map((pkg, index) => (
                 <div 
                   key={index}
@@ -146,33 +122,20 @@ export default function PricingPage() {
                     ))}
                   </div>
 
-                  <Link href="/contact">
-                    <Button 
-                      className={`w-full ${
-                        pkg.popular 
-                          ? 'bg-coral hover:bg-coral/90 text-white' 
-                          : 'border border-coral text-coral hover:bg-coral/5'
-                      }`}
-                    >
+                  <Button 
+                    asChild
+                    className={`w-full ${
+                      pkg.popular 
+                        ? 'bg-coral hover:bg-coral/90 text-white' 
+                        : 'border border-coral text-coral hover:bg-coral/5'
+                    }`}
+                  >
+                    <Link href="/contact">
                       Get Started
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </div>
               ))}
-            </div>
-
-            {/* Add-ons */}
-            <div className="bg-white rounded-2xl p-12 shadow-md">
-              <h3 className="text-2xl font-bold text-charcoal mb-8 text-center">Add-On Services</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {addOns.map((addon, index) => (
-                  <div key={index} className="p-6 border border-ash rounded-lg hover:border-coral transition-colors">
-                    <h4 className="font-semibold text-charcoal mb-1">{addon.name}</h4>
-                    <p className="text-coral font-bold mb-1">{addon.price}</p>
-                    <p className="text-sm text-muted-foreground">{addon.description}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </section>

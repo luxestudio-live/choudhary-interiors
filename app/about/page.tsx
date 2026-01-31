@@ -25,29 +25,29 @@ export default function AboutPage() {
 
   const timeline = [
     {
-      year: '2010',
+      year: '2005',
       title: 'Founded',
       description: 'choudhary Interiors was established with a vision to revolutionize interior design in India.'
     },
     {
-      year: '2014',
+      year: '2010',
+      title: 'Early Growth',
+      description: 'Built a trusted local presence and delivered landmark residential projects.'
+    },
+    {
+      year: '2015',
       title: 'Major Expansion',
-      description: 'Expanded to 5 cities with a team of 20+ experienced designers.'
+      description: 'Expanded to 5 cities with a growing team of experienced designers.'
     },
     {
-      year: '2018',
-      title: 'Industry Recognition',
-      description: 'Awarded multiple design excellence awards and recognized as a top design firm.'
-    },
-    {
-      year: '2022',
-      title: '500+ Projects',
-      description: 'Celebrated completion of 500+ successful projects across residential and commercial sectors.'
+      year: '2020',
+      title: '2K+ Happy Clients',
+      description: 'Celebrated a milestone of 2,000+ satisfied clients across residential and commercial sectors.'
     },
     {
       year: '2024',
-      title: 'Global Presence',
-      description: 'Expanding internationally with partnerships in multiple countries and serving global clientele.'
+      title: '500+ Projects',
+      description: 'Completed 500+ successful projects with a focus on quality and craftsmanship.'
     }
   ]
 
@@ -153,41 +153,6 @@ export default function AboutPage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Meet The Founders */}
-        <section className="py-16 sm:py-24 bg-soft-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-charcoal text-center mb-4">Meet The Founders</h2>
-            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16">
-              Rahul and Raj choudhary are passionate interior designers dedicated to transforming spaces and enhancing lives with their creative expertise.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-              {/* Founder 1 */}
-              <div className="bg-white rounded-2xl p-8 shadow-md text-center">
-                <img 
-                  src="/choudhary-interiors/images/rahul.jpg" 
-                  alt="Rahul choudhary" 
-                  className="w-32 h-32 rounded-full object-cover mx-auto mb-6"
-                />
-                <h3 className="text-xl font-bold text-charcoal mb-2">Rahul choudhary</h3>
-                <p className="text-teal font-medium mb-3">Founder & Lead Designer</p>
-                <p className="text-muted-foreground text-sm">With 12+ years of expertise, Rahul leads the vision of creating beautiful, functional spaces that transform everyday living.</p>
-              </div>
-
-              {/* Founder 2 */}
-              <div className="bg-white rounded-2xl p-8 shadow-md text-center">
-                <img 
-                  src="/choudhary-interiors/images/des2.jpg"
-                  alt="Raj choudhary" 
-                  className="w-32 h-32 rounded-full object-cover mx-auto mb-6"
-                />
-                <h3 className="text-xl font-bold text-charcoal mb-2">Raj choudhary</h3>
-                <p className="text-coral font-medium mb-3">Co-Founder & Creative Director</p>
-                <p className="text-muted-foreground text-sm">Raj brings innovative design solutions and strategic thinking to every project, ensuring excellence and client satisfaction.</p>
-              </div>
             </div>
           </div>
         </section>
