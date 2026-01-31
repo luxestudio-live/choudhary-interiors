@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
+import BrandLogo from "@/components/brand/logo"
 
 const services = [
   { name: "Home Interiors", href: "/services#home-interiors" },
@@ -25,11 +26,9 @@ function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-coral">
-                <span className="text-lg font-bold text-white">CI</span>
-              </div>
+              <BrandLogo size={40} className="shrink-0" />
               <div>
-                <span className="text-lg font-bold text-white">choudhary</span>
+                <span className="text-lg font-bold text-white">Choudhary</span>
                 <span className="ml-1 text-lg font-light text-teal">Interiors</span>
               </div>
             </Link>
@@ -124,7 +123,7 @@ function Footer() {
         {/* Bottom */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-700 pt-8 md:flex-row">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} choudhary Interiors. All rights reserved.
+            © {new Date().getFullYear()} Choudhary Interiors. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="/privacy" className="text-sm text-gray-400 transition-colors hover:text-coral">

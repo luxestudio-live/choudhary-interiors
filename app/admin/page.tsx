@@ -40,7 +40,7 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-md relative z-10">
         {/* Logo/Brand */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">choudhary Interiors</h1>
+          <h1 className="text-4xl font-bold text-white mb-2">Choudhary Interiors</h1>
           <p className="text-white/60 text-lg">Admin Portal</p>
         </div>
 

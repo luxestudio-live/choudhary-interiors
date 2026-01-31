@@ -27,7 +27,7 @@ export default function AboutPage() {
     {
       year: '2005',
       title: 'Founded',
-      description: 'choudhary Interiors was established with a vision to revolutionize interior design in India.'
+      description: 'Choudhary Interiors was established with a vision to revolutionize interior design in India.'
     },
     {
       year: '2010',
@@ -59,7 +59,7 @@ export default function AboutPage() {
         <section className="py-16 sm:py-24 bg-gradient-to-br from-coral to-teal">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6 text-balance">
-              About choudhary Interiors
+              About Choudhary Interiors
             </h1>
             <p className="text-lg text-white/90 max-w-2xl">
               Transforming spaces, enhancing lives, and building beautiful homes since 2010.
@@ -74,7 +74,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-4xl font-bold text-charcoal mb-6">Our Story</h2>
                 <p className="text-charcoal leading-relaxed mb-4">
-                  choudhary Interiors was founded with a simple yet powerful vision: to create beautiful, functional spaces that enhance the lives of our clients. What started as a small team of passionate designers has grown into one of India's most trusted interior design firms.
+                  Choudhary Interiors was founded with a simple yet powerful vision: to create beautiful, functional spaces that enhance the lives of our clients. What started as a small team of passionate designers has grown into one of India's most trusted interior design firms.
                 </p>
                 <p className="text-charcoal leading-relaxed mb-4">
                   We believe that exceptional interior design goes beyond aesthetics. It's about understanding the unique lifestyle of each client, listening to their dreams, and bringing them to life with precision, creativity, and craftsmanship.

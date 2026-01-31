@@ -153,7 +153,7 @@ export default function ServicesPage() {
 
             {/* Why Choose Us */}
             <section className="bg-gradient-to-br from-white to-soft-white rounded-2xl p-12 shadow-md border border-ash/20">
-              <h2 className="text-3xl font-bold text-charcoal mb-12 text-center">Why Choose choudhary Interiors</h2>
+              <h2 className="text-3xl font-bold text-charcoal mb-12 text-center">Why Choose Choudhary Interiors</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="group text-center p-6 rounded-xl hover:bg-white transition-all hover:shadow-lg hover:-translate-y-1">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-coral to-coral/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md">

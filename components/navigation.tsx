@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Menu, X, Phone, ChevronDown } from "lucide-react"
+import BrandLogo from "@/components/brand/logo"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -39,11 +40,9 @@ function Navigation() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 lg:h-20 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-coral">
-            <span className="text-lg font-bold text-primary-foreground">CI</span>
-          </div>
+          <BrandLogo size={40} className="shrink-0" />
           <div className="hidden sm:block">
-            <span className="text-lg font-bold text-charcoal">choudhary</span>
+            <span className="text-lg font-bold text-charcoal">Choudhary</span>
             <span className="ml-1 text-lg font-light text-teal">Interiors</span>
           </div>
         </Link>
