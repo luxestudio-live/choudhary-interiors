@@ -16,4 +16,4 @@
 :HL["/choudhary-interiors/images/kitchen.jpg","image"]
 :HL["/choudhary-interiors/images/bedroom.jpg","image"]
 :HL["/choudhary-interiors/images/wardrobe.jpg","image"]
-0:{"buildId":"NJOBE1Af0MVIVmSrDy-wn","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"1_vY0gbBKYGFrf0CUJD8v","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
