@@ -118,12 +118,20 @@ export default function AboutPage() {
               {values.map((value, index) => {
                 const Icon = value.icon
                 return (
-                  <div key={index} className="bg-white rounded-2xl p-8 shadow-md text-center">
-                    <div className="w-16 h-16 rounded-full bg-coral/10 flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-coral" />
+                  <div key={index} className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 overflow-hidden">
+                    {/* Background gradient on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-coral/5 to-teal/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    
+                    <div className="relative z-10 text-center">
+                      <div className="w-16 h-16 rounded-full bg-coral/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-coral/20 group-hover:scale-110 transition-all">
+                        <Icon className="w-8 h-8 text-coral group-hover:scale-110 transition-transform" />
+                      </div>
+                      <h3 className="text-xl font-bold text-charcoal mb-3 group-hover:text-coral transition-colors">{value.title}</h3>
+                      <p className="text-muted-foreground group-hover:text-charcoal transition-colors">{value.description}</p>
                     </div>
-                    <h3 className="text-xl font-bold text-charcoal mb-3">{value.title}</h3>
-                    <p className="text-muted-foreground">{value.description}</p>
+                    
+                    {/* Border accent */}
+                    <div className="absolute top-0 left-0 w-1 h-0 bg-gradient-to-b from-coral to-teal group-hover:h-full transition-all duration-500" />
                   </div>
                 )
               })}
@@ -135,21 +143,23 @@ export default function AboutPage() {
         <section className="py-16 sm:py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-charcoal text-center mb-16">Our Journey</h2>
-            <div className="space-y-8">
+            <div className="max-w-4xl mx-auto">
               {timeline.map((item, index) => (
-                <div key={index} className="flex gap-8">
-                  <div className="flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full bg-coral text-white flex items-center justify-center font-bold mb-4">
-                      {index + 1}
+                <div key={index} className="flex gap-8 mb-12 group">
+                  {/* Timeline connector */}
+                  <div className="flex flex-col items-center relative">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-coral to-teal text-white flex items-center justify-center font-bold text-lg shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all">
+                      {item.year}
                     </div>
                     {index < timeline.length - 1 && (
-                      <div className="w-1 h-20 bg-coral/30" />
+                      <div className="w-1 h-32 bg-gradient-to-b from-coral/50 to-transparent mt-4 group-hover:from-coral group-hover:to-teal transition-colors" />
                     )}
                   </div>
-                  <div className="pb-8">
-                    <p className="text-coral font-bold text-lg">{item.year}</p>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">{item.title}</h3>
-                    <p className="text-muted-foreground">{item.description}</p>
+                  
+                  {/* Content card */}
+                  <div className="pb-8 bg-white rounded-xl p-6 flex-1 shadow-md hover:shadow-lg transition-shadow border-l-4 border-coral/30 group-hover:border-coral/100">
+                    <h3 className="text-xl font-bold text-charcoal mb-2 group-hover:text-coral transition-colors">{item.title}</h3>
+                    <p className="text-muted-foreground group-hover:text-charcoal transition-colors leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -162,21 +172,33 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-charcoal text-center mb-16">By The Numbers</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-soft-white rounded-2xl p-8 shadow-md text-center">
-                <p className="text-4xl font-bold text-coral mb-2">500+</p>
-                <p className="text-muted-foreground">Projects Completed</p>
+              <div className="group relative bg-soft-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-coral/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative z-10 text-center">
+                  <p className="text-4xl font-bold text-coral mb-2 group-hover:scale-110 transition-transform">500+</p>
+                  <p className="text-muted-foreground group-hover:text-charcoal transition-colors font-medium">Projects Completed</p>
+                </div>
               </div>
-              <div className="bg-soft-white rounded-2xl p-8 shadow-md text-center">
-                <p className="text-4xl font-bold text-teal mb-2">2K+</p>
-                <p className="text-muted-foreground">Happy Clients</p>
+              <div className="group relative bg-soft-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-teal/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative z-10 text-center">
+                  <p className="text-4xl font-bold text-teal mb-2 group-hover:scale-110 transition-transform">2K+</p>
+                  <p className="text-muted-foreground group-hover:text-charcoal transition-colors font-medium">Happy Clients</p>
+                </div>
               </div>
-              <div className="bg-soft-white rounded-2xl p-8 shadow-md text-center">
-                <p className="text-4xl font-bold text-yellow mb-2">2</p>
-                <p className="text-muted-foreground">Dedicated Experts</p>
+              <div className="group relative bg-soft-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative z-10 text-center">
+                  <p className="text-4xl font-bold text-yellow mb-2 group-hover:scale-110 transition-transform">2</p>
+                  <p className="text-muted-foreground group-hover:text-charcoal transition-colors font-medium">Dedicated Experts</p>
+                </div>
               </div>
-              <div className="bg-soft-white rounded-2xl p-8 shadow-md text-center">
-                <p className="text-4xl font-bold text-charcoal mb-2">20+</p>
-                <p className="text-muted-foreground">Years Experience</p>
+              <div className="group relative bg-soft-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-charcoal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative z-10 text-center">
+                  <p className="text-4xl font-bold text-charcoal mb-2 group-hover:scale-110 transition-transform">20+</p>
+                  <p className="text-muted-foreground group-hover:text-charcoal transition-colors font-medium">Years Experience</p>
+                </div>
               </div>
             </div>
           </div>

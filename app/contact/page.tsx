@@ -60,46 +60,56 @@ export default function ContactPage() {
         <section className="py-16 sm:py-24 bg-soft-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-              {/* Contact Info */}
+              {/* Contact Info Cards */}
               <div className="lg:col-span-1 space-y-8">
-                <div className="bg-white rounded-2xl p-8 shadow-md">
-                  <div className="w-12 h-12 rounded-lg bg-coral/10 flex items-center justify-center mb-4">
-                    <Phone className="w-6 h-6 text-coral" />
+                <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-l-4 border-coral/30 hover:border-coral overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-coral/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-lg bg-coral/10 group-hover:bg-coral/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
+                      <Phone className="w-6 h-6 text-coral" />
+                    </div>
+                    <h3 className="font-bold text-charcoal mb-2 group-hover:text-coral transition-colors">Phone</h3>
+                    <a href="tel:+919876543210" className="text-coral hover:text-coral/80 font-medium transition-colors">
+                      +91 98765 43210
+                    </a>
                   </div>
-                  <h3 className="font-bold text-charcoal mb-2">Phone</h3>
-                  <a href="tel:+919876543210" className="text-coral hover:text-coral/80 font-medium">
-                    +91 98765 43210
-                  </a>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-md">
-                  <div className="w-12 h-12 rounded-lg bg-teal/10 flex items-center justify-center mb-4">
-                    <Mail className="w-6 h-6 text-teal" />
+                <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-l-4 border-teal/30 hover:border-teal overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-lg bg-teal/10 group-hover:bg-teal/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
+                      <Mail className="w-6 h-6 text-teal" />
+                    </div>
+                    <h3 className="font-bold text-charcoal mb-2 group-hover:text-teal transition-colors">Email</h3>
+                    <a href="mailto:hello@choudharyinteriors.com" className="text-teal hover:text-teal/80 font-medium transition-colors">
+                      hello@choudharyinteriors.com
+                    </a>
                   </div>
-                  <h3 className="font-bold text-charcoal mb-2">Email</h3>
-                  <a href="mailto:hello@choudharyinteriors.com" className="text-teal hover:text-teal/80 font-medium">
-                    hello@choudharyinteriors.com
-                  </a>
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 shadow-md">
-                  <div className="w-12 h-12 rounded-lg bg-yellow/10 flex items-center justify-center mb-4">
-                    <Clock className="w-6 h-6 text-yellow" />
+                <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-l-4 border-yellow/30 hover:border-yellow overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-lg bg-yellow/10 group-hover:bg-yellow/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
+                      <Clock className="w-6 h-6 text-yellow" />
+                    </div>
+                    <h3 className="font-bold text-charcoal mb-2 group-hover:text-yellow transition-colors">Hours</h3>
+                    <p className="text-charcoal font-medium">Mon - Sat</p>
+                    <p className="text-muted-foreground">9 AM - 9 PM IST</p>
                   </div>
-                  <h3 className="font-bold text-charcoal mb-2">Hours</h3>
-                  <p className="text-charcoal font-medium">Mon - Sat</p>
-                  <p className="text-muted-foreground">9 AM - 9 PM IST</p>
                 </div>
               </div>
 
               {/* Contact Form */}
               <div className="lg:col-span-2">
-                <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-md">
-                  <h2 className="text-2xl font-bold text-charcoal mb-8">Send us a Message</h2>
+                <div className="bg-gradient-to-br from-white to-soft-white rounded-2xl p-8 sm:p-12 shadow-md border border-ash/20">
+                  <h2 className="text-2xl font-bold text-charcoal mb-2">Send us a Message</h2>
+                  <p className="text-muted-foreground mb-8">We'll get back to you within 24 hours</p>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div>
+                      <div className="group">
                         <label className="block text-charcoal font-medium mb-2">Full Name</label>
                         <input
                           type="text"
@@ -107,11 +117,11 @@ export default function ContactPage() {
                           value={formData.name}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
+                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral group-hover:border-coral/50 transition-colors placeholder:text-gray-400"
                           placeholder="John Doe"
                         />
                       </div>
-                      <div>
+                      <div className="group">
                         <label className="block text-charcoal font-medium mb-2">Email</label>
                         <input
                           type="email"
@@ -119,31 +129,31 @@ export default function ContactPage() {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
+                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral group-hover:border-coral/50 transition-colors placeholder:text-gray-400"
                           placeholder="john@example.com"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div>
+                      <div className="group">
                         <label className="block text-charcoal font-medium mb-2">Phone Number</label>
                         <input
                           type="tel"
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
+                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral group-hover:border-coral/50 transition-colors placeholder:text-gray-400"
                           placeholder="+91 98765 43210"
                         />
                       </div>
-                      <div>
+                      <div className="group">
                         <label className="block text-charcoal font-medium mb-2">Project Type</label>
                         <select
                           name="projectType"
                           value={formData.projectType}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
+                          className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral group-hover:border-coral/50 transition-colors text-charcoal"
                         >
                           <option value="">Select a type</option>
                           <option value="residential">Residential</option>
@@ -156,13 +166,13 @@ export default function ContactPage() {
                       </div>
                     </div>
 
-                    <div>
+                    <div className="group">
                       <label className="block text-charcoal font-medium mb-2">Budget Range</label>
                       <select
                         name="budget"
                         value={formData.budget}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral"
+                        className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral group-hover:border-coral/50 transition-colors text-charcoal"
                       >
                         <option value="">Select budget range</option>
                         <option value="1l-3l">₹1,00,000 - ₹3,00,000</option>
@@ -181,62 +191,91 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         rows={6}
-                        className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral resize-none"
+                        className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral resize-none group-hover:border-coral/50 transition-colors placeholder:text-gray-400"
                         placeholder="Tell us about your project..."
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full bg-coral hover:bg-coral/90 text-white">
-                      Send Message
-                    </Button>
+                    <button
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-coral via-coral to-coral/80 hover:from-coral/90 hover:via-coral/85 hover:to-coral/70 text-white font-semibold py-4 rounded-lg transition-all hover:shadow-2xl hover:-translate-y-1 group transform"
+                    >
+                      <span className="flex items-center justify-center gap-2">
+                        Send Message
+                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </span>
+                    </button>
                   </form>
                 </div>
               </div>
             </div>
 
             {/* Offices */}
-            <h2 className="text-3xl font-bold text-charcoal mb-12 text-center">Our Office</h2>
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-charcoal mb-12 text-center">Our Studio</h2>
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-3xl mx-auto">
               {offices.map((office, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-md hover:shadow-lg transition-shadow">
-                  <h3 className="text-2xl font-bold text-charcoal mb-6">{office.city}</h3>
-                  
-                  <div className="space-y-4 text-sm">
-                    <div className="flex items-start gap-3">
-                      <MapPin className="w-5 h-5 text-coral flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-medium text-charcoal">Address</p>
-                        <p className="text-muted-foreground">{office.address}</p>
+                <div key={index} className="group bg-gradient-to-br from-white to-soft-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 border border-ash/20 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-coral/5 via-transparent to-teal/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-bold text-charcoal mb-8 group-hover:text-coral transition-colors">{office.city}</h3>
+                    
+                    <div className="space-y-6">
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-coral/10 group-hover:bg-coral/20 flex items-center justify-center flex-shrink-0 transition-all group-hover:scale-110">
+                          <MapPin className="w-5 h-5 text-coral" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-charcoal mb-1">Address</p>
+                          <p className="text-muted-foreground leading-relaxed">{office.address}</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-teal/10 group-hover:bg-teal/20 flex items-center justify-center flex-shrink-0 transition-all group-hover:scale-110">
+                          <Phone className="w-5 h-5 text-teal" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-charcoal mb-1">Phone</p>
+                          <a href={`tel:${office.phone.replace(/\s/g, '')}`} className="text-teal hover:text-teal/80 font-medium transition-colors">
+                            {office.phone}
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-yellow/10 group-hover:bg-yellow/20 flex items-center justify-center flex-shrink-0 transition-all group-hover:scale-110">
+                          <Mail className="w-5 h-5 text-yellow" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-charcoal mb-1">Email</p>
+                          <a href={`mailto:${office.email}`} className="text-yellow hover:text-yellow/80 font-medium transition-colors">
+                            {office.email}
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-coral/10 group-hover:bg-coral/20 flex items-center justify-center flex-shrink-0 transition-all group-hover:scale-110">
+                          <Clock className="w-5 h-5 text-coral" />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-charcoal mb-1">Hours</p>
+                          <p className="text-muted-foreground">{office.hours}</p>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <Phone className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-medium text-charcoal">Phone</p>
-                        <a href={`tel:${office.phone.replace(/\s/g, '')}`} className="text-teal hover:text-teal/80">
-                          {office.phone}
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <Mail className="w-5 h-5 text-yellow flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-medium text-charcoal">Email</p>
-                        <a href={`mailto:${office.email}`} className="text-yellow hover:text-yellow/80">
-                          {office.email}
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <Clock className="w-5 h-5 text-coral flex-shrink-0 mt-0.5" />
-                      <div>
-                        <p className="font-medium text-charcoal">Hours</p>
-                        <p className="text-muted-foreground">{office.hours}</p>
-                      </div>
-                    </div>
+                    <a
+                      href="https://maps.app.goo.gl/6ahgVS1xEw4fR1ao9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-coral/10 hover:bg-coral/20 text-coral font-semibold rounded-lg transition-all group-hover:shadow-lg"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      Get Directions
+                    </a>
                   </div>
                 </div>
               ))}
@@ -245,73 +284,25 @@ export default function ContactPage() {
         </section>
 
         {/* Map Section */}
-        <section className="py-16 sm:py-24 bg-white">
+        <section className="py-16 sm:py-24 bg-soft-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">Visit Our Studio</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Located in the heart of Mumbai, our design studio is open for consultations and project discussions.
+              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">Studio Location</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+                Visit our design studio in the heart of Bhandup West, Mumbai for personalized consultations.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Map Embed */}
-              <div className="rounded-2xl overflow-hidden shadow-lg h-96 lg:h-full min-h-96">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.4955782753744!2d72.93556287588306!3d19.14311808207194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b91ac4c8c5c3%3A0x5e3f3e3e3e3e3e3e!2sShop%20no.%202%2C%20Badwaik%20chawl%2C%20Lal%20Bahadur%20Shastri%20Marg%2C%20opp.%20Jain%20mandir%2C%20Kukreja%2C%20Govind%20Nagar%2C%20Bhandup%20West%2C%20Mumbai%2C%20Maharashtra%20400078!5e0!3m2!1sen!2sin!4v1706799999999!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
-
-              {/* Location Info */}
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-4">choudhary Interiors Studio</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-4">
-                      <MapPin className="w-6 h-6 text-coral flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-charcoal mb-1">Address</p>
-                        <p className="text-muted-foreground">Shop no. 2, Badwaik chawl, Lal Bahadur Shastri Marg, opp. Jain mandir, Kukreja, Govind Nagar, Bhandup West, Mumbai, Maharashtra 400078</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <Phone className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-charcoal mb-1">Phone</p>
-                        <a href="tel:+919876543210" className="text-teal hover:text-teal/80 font-medium">
-                          +91 98765 43210
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-4">
-                      <Clock className="w-6 h-6 text-yellow flex-shrink-0 mt-1" />
-                      <div>
-                        <p className="font-semibold text-charcoal mb-1">Hours</p>
-                        <p className="text-muted-foreground">Monday - Saturday</p>
-                        <p className="text-muted-foreground">9:00 AM - 9:00 PM IST</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <a 
-                  href="https://maps.app.goo.gl/6ahgVS1xEw4fR1ao9" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  <Button className="w-full bg-coral hover:bg-coral/90 text-white">
-                    Get Directions
-                  </Button>
-                </a>
-              </div>
+            <div className="rounded-2xl overflow-hidden shadow-2xl h-96 border border-ash/20">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.4955782753744!2d72.93556287588306!3d19.14311808207194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b91ac4c8c5c3%3A0x5e3f3e3e3e3e3e3e!2sShop%20no.%202%2C%20Badwaik%20chawl%2C%20Lal%20Bahadur%20Shastri%20Marg%2C%20opp.%20Jain%20mandir%2C%20Kukreja%2C%20Govind%20Nagar%2C%20Bhandup%20West%2C%20Mumbai%2C%20Maharashtra%20400078!5e0!3m2!1sen!2sin!4v1706799999999!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </section>

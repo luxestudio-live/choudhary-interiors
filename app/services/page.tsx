@@ -113,31 +113,35 @@ export default function ServicesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
               {services.map((service, index) => (
-                <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow">
-                  <div className="h-64 overflow-hidden">
+                <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 border-t-4 border-coral/30 hover:border-coral">
+                  <div className="h-64 overflow-hidden relative">
                     <img 
                       src={service.image || "/placeholder.svg"} 
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <div className="p-8">
-                    <h3 className="text-2xl font-bold text-charcoal mb-3">{service.title}</h3>
-                    <p className="text-muted-foreground mb-6">{service.description}</p>
+                    <div className="flex items-start justify-between mb-4">
+                      <h3 className="text-2xl font-bold text-charcoal group-hover:text-coral transition-colors flex-1">{service.title}</h3>
+                      <span className="ml-2 px-3 py-1 bg-coral/10 text-coral text-sm font-semibold rounded-full group-hover:bg-coral group-hover:text-white transition-all">New</span>
+                    </div>
+                    <p className="text-muted-foreground mb-6 group-hover:text-charcoal transition-colors">{service.description}</p>
                     
-                    <div className="space-y-3 mb-8">
+                    <div className="space-y-2 mb-8 bg-soft-white/50 p-4 rounded-lg group-hover:bg-coral/5 transition-colors">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-5 h-5 text-coral flex-shrink-0 mt-0.5" />
-                          <span className="text-charcoal">{feature}</span>
+                          <CheckCircle2 className="w-5 h-5 text-coral flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                          <span className="text-sm text-charcoal">{feature}</span>
                         </div>
                       ))}
                     </div>
 
-                    <div className="flex items-center justify-between pt-6 border-t border-ash">
-                      <span className="text-xl font-semibold text-coral">{service.price}</span>
+                    <div className="flex items-center justify-between pt-6 border-t border-ash/30 group-hover:border-coral/30 transition-colors">
+                      <span className="text-xl font-bold text-coral group-hover:scale-110 transition-transform origin-left">{service.price}</span>
                       <Link href="/contact">
-                        <Button className="bg-coral hover:bg-coral/90 text-white">
+                        <Button className="bg-coral hover:bg-coral/90 text-white shadow-md hover:shadow-lg transition-all group-hover:scale-105">
                           Inquire Now
                         </Button>
                       </Link>
@@ -148,29 +152,29 @@ export default function ServicesPage() {
             </div>
 
             {/* Why Choose Us */}
-            <section className="bg-white rounded-2xl p-12 shadow-md">
-              <h2 className="text-3xl font-bold text-charcoal mb-8 text-center">Why Choose choudhary Interiors</h2>
+            <section className="bg-gradient-to-br from-white to-soft-white rounded-2xl p-12 shadow-md border border-ash/20">
+              <h2 className="text-3xl font-bold text-charcoal mb-12 text-center">Why Choose choudhary Interiors</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-coral/10 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl font-bold text-coral">✓</span>
+                <div className="group text-center p-6 rounded-xl hover:bg-white transition-all hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-coral to-coral/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md">
+                    <span className="text-3xl font-bold text-white">✓</span>
                   </div>
-                  <h3 className="font-semibold text-charcoal mb-2">Expert Team</h3>
-                  <p className="text-muted-foreground">Experienced designers with 10+ years in the industry</p>
+                  <h3 className="font-semibold text-charcoal mb-2 group-hover:text-coral transition-colors">Expert Team</h3>
+                  <p className="text-muted-foreground group-hover:text-charcoal transition-colors">Experienced designers with 20+ years in the industry</p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-teal/10 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl font-bold text-teal">✓</span>
+                <div className="group text-center p-6 rounded-xl hover:bg-white transition-all hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-teal to-teal/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md">
+                    <span className="text-3xl font-bold text-white">✓</span>
                   </div>
-                  <h3 className="font-semibold text-charcoal mb-2">Quality Guaranteed</h3>
-                  <p className="text-muted-foreground">Premium materials and flawless execution every time</p>
+                  <h3 className="font-semibold text-charcoal mb-2 group-hover:text-teal transition-colors">Quality Guaranteed</h3>
+                  <p className="text-muted-foreground group-hover:text-charcoal transition-colors">Premium materials and flawless execution every time</p>
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 rounded-full bg-yellow/10 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl font-bold text-yellow">✓</span>
+                <div className="group text-center p-6 rounded-xl hover:bg-white transition-all hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow to-yellow/60 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md">
+                    <span className="text-3xl font-bold text-white">✓</span>
                   </div>
-                  <h3 className="font-semibold text-charcoal mb-2">Transparent Pricing</h3>
-                  <p className="text-muted-foreground">No hidden costs, complete value for your investment</p>
+                  <h3 className="font-semibold text-charcoal mb-2 group-hover:text-yellow transition-colors">Transparent Pricing</h3>
+                  <p className="text-muted-foreground group-hover:text-charcoal transition-colors">No hidden costs, complete value for your investment</p>
                 </div>
               </div>
             </section>
