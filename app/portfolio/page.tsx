@@ -131,7 +131,7 @@ export default function PortfolioPage() {
                   className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer"
                   onClick={() => setSelectedProject(project.id)}
                 >
-                  <div className="relative h-72 overflow-hidden">
+                  <div className="relative h-96 overflow-hidden">
                     <img 
                       src={project.image || "/placeholder.svg"} 
                       alt={project.title}
@@ -221,13 +221,13 @@ export default function PortfolioPage() {
                           {project.gallery && project.gallery.length > 0 && (
                             <div className="mb-12">
                               <h3 className="text-2xl font-bold text-charcoal mb-6">Project Gallery</h3>
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-max">
                                 {project.gallery.map((image, index) => (
                                   <div key={index} className="rounded-lg overflow-hidden shadow-md">
                                     <img
                                       src={image}
                                       alt={`Gallery ${index + 1}`}
-                                      className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                                      className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
                                     />
                                   </div>
                                 ))}
@@ -242,12 +242,12 @@ export default function PortfolioPage() {
                                 <Play className="w-6 h-6 text-coral fill-coral" />
                                 Watch the Project Transformation
                               </h3>
-                              <div className="rounded-lg overflow-hidden shadow-lg bg-charcoal aspect-video">
+                              <div className="rounded-lg overflow-hidden shadow-lg bg-charcoal max-w-sm mx-auto">
                                 <video
                                   width="100%"
                                   height="100%"
                                   controls
-                                  className="w-full h-full"
+                                  className="w-full h-auto"
                                 >
                                   <source src={project.video} type="video/mp4" />
                                   Your browser does not support the video tag.
