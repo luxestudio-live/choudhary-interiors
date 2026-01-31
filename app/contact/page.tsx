@@ -78,8 +78,8 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
               {/* Contact Info Cards */}
               <div className="lg:col-span-1 space-y-8">
-                <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-l-4 border-coral/30 hover:border-coral overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-coral/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-l-4 border-coral/30 hover:border-coral overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-coral/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                   <div className="relative z-10">
                     <div className="w-12 h-12 rounded-lg bg-coral/10 group-hover:bg-coral/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
                       <Phone className="w-6 h-6 text-coral" />
@@ -91,8 +91,8 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-l-4 border-teal/30 hover:border-teal overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-teal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-l-4 border-teal/30 hover:border-teal overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-teal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                   <div className="relative z-10">
                     <div className="w-12 h-12 rounded-lg bg-teal/10 group-hover:bg-teal/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
                       <Mail className="w-6 h-6 text-teal" />
@@ -104,8 +104,8 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-l-4 border-yellow/30 hover:border-yellow overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border-l-4 border-yellow/30 hover:border-yellow overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                   <div className="relative z-10">
                     <div className="w-12 h-12 rounded-lg bg-yellow/10 group-hover:bg-yellow/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-all">
                       <Clock className="w-6 h-6 text-yellow" />
@@ -235,8 +235,8 @@ export default function ContactPage() {
             <h2 className="text-4xl font-bold text-charcoal mb-12 text-center">Our Studio</h2>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-3xl mx-auto">
               {offices.map((office, index) => (
-                <div key={index} className="group bg-gradient-to-br from-white to-soft-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 border border-ash/20 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-coral/5 via-transparent to-teal/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div key={index} className="group relative bg-gradient-to-br from-white to-soft-white rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all hover:-translate-y-2 border border-ash/20 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-coral/5 via-transparent to-teal/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
                   <div className="relative z-10">
                     <h3 className="text-2xl font-bold text-charcoal mb-8 group-hover:text-coral transition-colors">{office.city}</h3>
                     
