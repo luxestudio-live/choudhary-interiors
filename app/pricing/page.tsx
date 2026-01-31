@@ -7,17 +7,17 @@ import Link from 'next/link'
 export default function PricingPage() {
   const packages = [
     {
-      name: 'Consultation',
-      price: '₹5,000',
-      description: 'Perfect for design advice and initial planning',
-      duration: 'One-time',
+      name: 'False Ceiling & Lighting',
+      price: '₹15,000',
+      description: 'Ideal for elevating ambience with modern ceiling and lighting',
+      duration: 'Per room',
       features: [
-        '1 hour consultation with designer',
-        'Space assessment',
-        'Design ideas & suggestions',
-        'Budget guidance',
-        'Timeline planning',
-        'Email support for 2 weeks'
+        'Ceiling design options',
+        'Lighting layout plan',
+        'Cove & spot lighting',
+        'Material guidance',
+        'Execution timeline',
+        'On-site support'
       ],
       popular: false
     },
@@ -27,9 +27,9 @@ export default function PricingPage() {
       description: 'Ideal for single rooms or small spaces',
       duration: 'Per room',
       features: [
-        'Complete design consultation',
-        'Space planning & layout',
-        '3D visualization',
+        'Complete design briefing',
+        'Wardrobe & storage planning',
+        'False ceiling & lighting planning',
         'Color & material selection',
         'Furniture recommendations',
         'Vendor coordination',
@@ -46,9 +46,9 @@ export default function PricingPage() {
       features: [
         'Complete home design',
         'Multiple room designs',
-        'Advanced 3D renderings',
+        'Detailed lighting design',
         'Premium material selection',
-        'Modular furniture design',
+        'Modular kitchen design',
         'Project management',
         'Interior styling',
         '6 months support',
@@ -65,7 +65,7 @@ export default function PricingPage() {
         'Commercial space design',
         'Brand integration',
         'Space optimization',
-        'Compliance consultation',
+        'Compliance support',
         'Employee wellness design',
         'Full project management',
         'On-site coordination',
@@ -77,11 +77,11 @@ export default function PricingPage() {
   ]
 
   const addOns = [
-    { name: '3D Visualization', price: '₹10,000', description: 'Per space' },
-    { name: 'Custom Furniture Design', price: '₹25,000', description: 'Per piece' },
+    { name: 'False Ceiling & Lighting', price: '₹12,000', description: 'Per room' },
+    { name: 'Modular Kitchen Design', price: '₹25,000', description: 'Per kitchen' },
+    { name: 'Wardrobe & Storage', price: '₹18,000', description: 'Per unit' },
+    { name: 'Civil Work', price: '₹20,000', description: 'Per room' },
     { name: 'Material Sourcing', price: '₹15,000', description: 'Service charge' },
-    { name: 'Project Management', price: '₹5,000/month', description: 'Monthly retainer' },
-    { name: 'Design Revisions', price: '₹5,000', description: 'Per round' },
     { name: 'Site Supervision', price: '₹2,500/day', description: 'Per day' }
   ]
 
@@ -211,16 +211,16 @@ export default function PricingPage() {
                   <p className="text-muted-foreground">Yes! We offer package discounts when designing multiple rooms or entire homes. Contact us for custom quotes.</p>
                 </div>
                 <div className="border-b border-ash pb-6">
-                  <h4 className="font-bold text-charcoal mb-2">Can we start with a consultation?</h4>
-                  <p className="text-muted-foreground">Absolutely. Our consultation package is perfect for exploring ideas and understanding your needs before committing to a full project.</p>
+                  <h4 className="font-bold text-charcoal mb-2">Can we start with a site visit?</h4>
+                  <p className="text-muted-foreground">Absolutely. A site visit helps us understand your space and requirements before committing to a full project.</p>
                 </div>
                 <div className="border-b border-ash pb-6">
                   <h4 className="font-bold text-charcoal mb-2">What's included in the package price?</h4>
-                  <p className="text-muted-foreground">Package prices include design consultation, planning, 3D visualization, and installation supervision. Some add-ons may have additional costs.</p>
+                  <p className="text-muted-foreground">Package prices include planning, lighting design, and installation supervision. Some add-ons may have additional costs.</p>
                 </div>
                 <div>
                   <h4 className="font-bold text-charcoal mb-2">Do you offer payment plans?</h4>
-                  <p className="text-muted-foreground">Yes, we offer flexible payment plans for larger projects. Discuss with our team during consultation.</p>
+                  <p className="text-muted-foreground">Yes, we offer flexible payment plans for larger projects. Discuss with our team during your site visit.</p>
                 </div>
               </div>
             </div>
@@ -234,11 +234,11 @@ export default function PricingPage() {
               Not Sure Which Package is Right for You?
             </h2>
             <p className="text-lg text-white/80 mb-8">
-              Schedule a free consultation with our design experts to find the perfect solution for your project.
+              Schedule a free site visit with our design experts to find the perfect solution for your project.
             </p>
             <Link href="/contact">
               <Button size="lg" className="bg-coral hover:bg-coral/90 text-white">
-                Get Free Consultation
+                Book Free Site Visit
               </Button>
             </Link>
           </div>

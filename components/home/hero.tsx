@@ -51,11 +51,11 @@ export default function Hero() {
                 <p className="text-sm text-muted-foreground">Projects Completed</p>
               </div>
               <div className="transition-transform hover:scale-105">
-                <p className="text-2xl font-bold text-charcoal">50+</p>
-                <p className="text-sm text-muted-foreground">Expert Designers</p>
+                <p className="text-2xl font-bold text-charcoal">20+</p>
+                <p className="text-sm text-muted-foreground">Years Experience</p>
               </div>
               <div className="transition-transform hover:scale-105">
-                <p className="text-2xl font-bold text-charcoal">10K+</p>
+                <p className="text-2xl font-bold text-charcoal">2K+</p>
                 <p className="text-sm text-muted-foreground">Happy Clients</p>
               </div>
             </div>

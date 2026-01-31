@@ -19,26 +19,26 @@ export default function Services() {
     },
     {
       icon: Sofa,
-      title: 'Modular Furniture',
-      description: 'Custom-designed modular solutions for optimal space utilization',
-      image: '/choudhary-interiors/images/wardrobe.jpg'
+      title: 'Modular Kitchen',
+      description: 'Custom modular kitchens designed for functionality and style',
+      image: '/choudhary-interiors/images/kitchen.jpg'
     },
     {
       icon: Wind,
-      title: 'Space Planning',
-      description: 'Smart layouts and design strategies to maximize your space efficiently',
+      title: 'False Ceiling & Lighting',
+      description: 'Elegant ceiling designs with smart lighting solutions',
       image: '/choudhary-interiors/images/bedroom.jpg'
     },
     {
       icon: Users,
-      title: 'Consultation',
-      description: 'Expert advice from our seasoned designers to guide your vision',
-      image: '/choudhary-interiors/images/kitchen.jpg'
+      title: 'Wardrobe & Storage',
+      description: 'Space-saving wardrobes and storage tailored to your needs',
+      image: '/choudhary-interiors/images/wardrobe.jpg'
     },
     {
       icon: FileText,
-      title: '3D Visualization',
-      description: 'See your design come to life before implementation',
+      title: 'Civil Work',
+      description: 'End-to-end civil work to prepare your space perfectly',
       image: '/choudhary-interiors/images/proj2.jpg'
     }
   ]

@@ -180,16 +180,16 @@ export default function PortfolioPage() {
                   <p className="text-muted-foreground">Projects Completed</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-4xl font-bold text-teal mb-2">10K+</p>
+                  <p className="text-4xl font-bold text-teal mb-2">2K+</p>
                   <p className="text-muted-foreground">Happy Clients</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-4xl font-bold text-yellow mb-2">15+</p>
-                  <p className="text-muted-foreground">Years Experience</p>
+                  <p className="text-4xl font-bold text-yellow mb-2">2005</p>
+                  <p className="text-muted-foreground">Established</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-4xl font-bold text-charcoal mb-2">50+</p>
-                  <p className="text-muted-foreground">Expert Designers</p>
+                  <p className="text-4xl font-bold text-charcoal mb-2">20+</p>
+                  <p className="text-muted-foreground">Years Experience</p>
                 </div>
               </div>
             </section>

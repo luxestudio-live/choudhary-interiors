@@ -148,8 +148,10 @@ export default function ContactPage() {
                           <option value="">Select a type</option>
                           <option value="residential">Residential</option>
                           <option value="commercial">Commercial</option>
-                          <option value="modular">Modular Furniture</option>
-                          <option value="consultation">Consultation Only</option>
+                          <option value="modular-kitchen">Modular Kitchen</option>
+                          <option value="false-ceiling">False ceiling & lighting</option>
+                          <option value="wardrobe-storage">Wardrobe & Storage</option>
+                          <option value="civil-work">Civil work</option>
                         </select>
                       </div>
                     </div>

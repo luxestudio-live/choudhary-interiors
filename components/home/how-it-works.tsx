@@ -5,14 +5,14 @@ export default function HowItWorks() {
     {
       number: '01',
       icon: Lightbulb,
-      title: 'Consultation',
-      description: 'We understand your vision, style preferences, and requirements through detailed consultation'
+      title: 'Site Visit',
+      description: 'We understand your vision, style preferences, and requirements during a detailed site visit'
     },
     {
       number: '02',
       icon: Pencil,
       title: 'Design & Planning',
-      description: 'Our designers create detailed 3D visualizations and layouts tailored to your space'
+      description: 'Our designers create detailed layouts and plans tailored to your space'
     },
     {
       number: '03',
@@ -37,7 +37,7 @@ export default function HowItWorks() {
             Simple & Transparent Process
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            From your first consultation to the final touch, we guide you through every step
+            From your first site visit to the final touch, we guide you through every step
           </p>
         </div>
 

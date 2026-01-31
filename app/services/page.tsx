@@ -14,8 +14,8 @@ export default function ServicesPage() {
         'Complete home interior design',
         'Bedroom & living area design',
         'Kitchen & dining solutions',
-        'Color consultation',
-        '3D visualization',
+        'Color selection guidance',
+        'False ceiling & lighting planning',
         'On-site installation management'
       ],
       price: 'Starting at ₹50,000'
@@ -25,7 +25,7 @@ export default function ServicesPage() {
       description: 'Create productive, professional spaces that enhance employee experience and reflect your brand identity.',
       image: '/choudhary-interiors/images/office.jpg',
       features: [
-        'Office space planning',
+        'Office layout planning',
         'Reception & meeting areas',
         'Collaborative workspace design',
         'Ergonomic furniture selection',
@@ -35,60 +35,60 @@ export default function ServicesPage() {
       price: 'Custom Quote'
     },
     {
-      title: 'Modular Furniture Solutions',
-      description: 'Smart, space-efficient modular designs that maximize your space while maintaining aesthetic appeal.',
-      image: '/choudhary-interiors/images/wardrobe.jpg',
+      title: 'Modular Kitchen Solutions',
+      description: 'Custom modular kitchens that blend aesthetics with everyday functionality.',
+      image: '/choudhary-interiors/images/kitchen.jpg',
       features: [
-        'Custom modular design',
-        'Built-in wardrobes',
-        'Kitchen modules',
-        'Storage solutions',
-        'Quality wood finishes',
+        'Custom kitchen layout design',
+        'Cabinetry & lofts',
+        'Countertops & backsplashes',
+        'Hardware & fittings',
+        'Appliance integration',
         'Expert installation'
       ],
       price: 'Starting at ₹75,000'
     },
     {
-      title: 'Space Planning & Optimization',
-      description: 'Strategic space planning to maximize functionality and flow in your residential or commercial space.',
+      title: 'False Ceiling & Lighting',
+      description: 'Stylish ceiling designs with layered lighting for the perfect ambience.',
       image: '/choudhary-interiors/images/bedroom.jpg',
       features: [
-        'Floor plan analysis',
-        'Layout optimization',
-        'Traffic flow design',
-        'Zoning strategies',
-        'Multi-functional spaces',
-        'Budget-friendly solutions'
+        'Gypsum & POP ceiling work',
+        'Cove & spot lighting',
+        'Electrical layout planning',
+        'LED profile integration',
+        'Acoustic options',
+        'Finishing & painting'
       ],
-      price: 'Starting at ₹25,000'
+      price: 'Starting at ₹30,000'
     },
     {
-      title: 'Design Consultation',
-      description: 'Get expert advice from our experienced designers to guide your interior design journey.',
-      image: '/choudhary-interiors/images/kitchen.jpg',
+      title: 'Wardrobe & Storage',
+      description: 'Space-saving wardrobes and storage units tailored to your room and lifestyle.',
+      image: '/choudhary-interiors/images/wardrobe.jpg',
       features: [
-        'One-on-one consultation',
-        'Design concept development',
-        'Color & material selection',
-        'Budget planning',
-        'Vendor recommendations',
-        'Timeline planning'
+        'Sliding & hinged wardrobes',
+        'Loft & overhead storage',
+        'Internal organizers',
+        'Custom finishes',
+        'Mirror & glass options',
+        'On-site installation'
       ],
-      price: 'Starting at ₹5,000'
+      price: 'Starting at ₹45,000'
     },
     {
-      title: '3D Visualization & Rendering',
-      description: 'See your design come to life before implementation with photorealistic 3D visualizations.',
+      title: 'Civil Work',
+      description: 'Reliable civil work to prepare and perfect your interiors before finishing.',
       image: '/choudhary-interiors/images/proj2.jpg',
       features: [
-        'High-quality 3D renderings',
-        'Multiple design options',
-        'Color scheme visualization',
-        'Furniture placement preview',
-        'Material samples',
-        'Design revisions'
+        'Demolition & masonry',
+        'Plumbing & electrical coordination',
+        'Flooring & tiling prep',
+        'Wall finishing & plastering',
+        'Partition work',
+        'Site supervision'
       ],
-      price: 'Starting at ₹10,000'
+      price: 'Starting at ₹40,000'
     }
   ]
 

@@ -19,13 +19,13 @@ export default function Testimonials() {
     {
       name: 'Rajesh Nair',
       title: 'Business Owner',
-      content: 'The modular furniture solutions they designed for our office have improved our space utilization significantly. Great value for money!',
+      content: 'The modular kitchen solutions they designed for our office pantry have improved functionality significantly. Great value for money!',
       rating: 5
     },
     {
       name: 'Priya Desai',
       title: 'Homeowner',
-      content: 'From consultation to execution, the entire process was smooth and transparent. Our home now looks like a magazine spread!',
+      content: 'From site visit to execution, the entire process was smooth and transparent. Our home now looks like a magazine spread!',
       rating: 5
     }
   ]
