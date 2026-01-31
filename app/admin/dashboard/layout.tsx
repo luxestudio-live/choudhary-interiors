@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useAuth } from '@/lib/auth-context';
 import { 
   LayoutDashboard, 
-  FolderKanban, 
+  Folder, 
   MessageSquare, 
   Star,
   LogOut,
@@ -17,7 +17,7 @@ import AdminProtectedLayout from '@/components/admin/admin-layout';
 
 const navigation = [
   { name: 'Dashboard', href: '/admin/dashboard', icon: LayoutDashboard },
-  { name: 'Projects', href: '/admin/dashboard/projects', icon: FolderKanban },
+  { name: 'Projects', href: '/admin/dashboard/projects', icon: Folder },
   { name: 'Reviews', href: '/admin/dashboard/reviews', icon: Star },
   { name: 'Enquiries', href: '/admin/dashboard/enquiries', icon: MessageSquare },
 ];
