@@ -32,8 +32,8 @@ export default function CTA() {
           <div className="flex flex-col sm:flex-row gap-8 justify-center text-white/90 text-sm">
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4" />
-              <a href="mailto:hello@choudharyinteriors.com" className="hover:text-white transition">
-                hello@choudharyinteriors.com
+              <a href="mailto:hello@choudharyinteriors.in" className="hover:text-white transition">
+                hello@choudharyinteriors.in
               </a>
             </div>
             <div className="flex items-center gap-2">

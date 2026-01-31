@@ -28,7 +28,7 @@ export default function TermsPage() {
                 We reserve the right to update these terms at any time.
               </p>
               <p className="text-charcoal">
-                For questions, contact us at hello@choudharyinteriors.com.
+                For questions, contact us at hello@choudharyinteriors.in.
               </p>
             </div>
           </div>

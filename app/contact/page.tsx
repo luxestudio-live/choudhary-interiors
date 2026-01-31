@@ -51,7 +51,7 @@ export default function ContactPage() {
       city: 'Mumbai',
       address: 'Shop no. 2, Badwaik chawl, Lal Bahadur Shastri Marg, opp. Jain mandir, Kukreja, Govind Nagar, Bhandup West, Mumbai, Maharashtra 400078',
       phone: '+91 88283 80687',
-      email: 'hello@choudharyinteriors.com',
+      email: 'hello@choudharyinteriors.in',
       hours: 'Mon - Sat, 9AM - 9PM'
     }
   ]
@@ -98,8 +98,8 @@ export default function ContactPage() {
                       <Mail className="w-6 h-6 text-teal" />
                     </div>
                     <h3 className="font-bold text-charcoal mb-2 group-hover:text-teal transition-colors">Email</h3>
-                    <a href="mailto:hello@choudharyinteriors.com" className="text-teal hover:text-teal/80 font-medium transition-colors">
-                      hello@choudharyinteriors.com
+                    <a href="mailto:hello@choudharyinteriors.in" className="text-teal hover:text-teal/80 font-medium transition-colors">
+                      hello@choudharyinteriors.in
                     </a>
                   </div>
                 </div>
@@ -341,7 +341,7 @@ export default function ContactPage() {
                   Call Us Now
                 </Button>
               </a>
-              <a href="mailto:hello@choudharyinteriors.com">
+              <a href="mailto:hello@choudharyinteriors.in">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-transparent">
                   Send Email
                 </Button>

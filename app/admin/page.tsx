@@ -71,7 +71,7 @@ export default function AdminLoginPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full px-4 py-3 border border-ash rounded-lg focus:outline-none focus:ring-2 focus:ring-coral transition-all"
-                placeholder="admin@choudharyinteriors.com"
+                placeholder="admin@choudharyinteriors.in"
               />
             </div>
 

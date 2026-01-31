@@ -28,7 +28,7 @@ export default function PrivacyPage() {
               </p>
               <p className="text-charcoal">
                 If you have any questions or requests regarding your data, please contact us at
-                hello@choudharyinteriors.com.
+                hello@choudharyinteriors.in.
               </p>
             </div>
           </div>

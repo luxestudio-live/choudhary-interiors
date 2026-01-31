@@ -112,9 +112,9 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="mailto:hello@choudharyinteriors.com" className="flex items-center gap-3 text-sm text-gray-400 transition-colors hover:text-coral">
+                <Link href="mailto:hello@choudharyinteriors.in" className="flex items-center gap-3 text-sm text-gray-400 transition-colors hover:text-coral">
                   <Mail className="h-5 w-5 shrink-0 text-teal" />
-                  hello@choudharyinteriors.com
+                  hello@choudharyinteriors.in
                 </Link>
               </li>
             </ul>
