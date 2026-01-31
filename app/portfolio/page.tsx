@@ -177,6 +177,38 @@ export default function PortfolioPage() {
     }))
   ]
 
+  const isYouTubeUrl = (url: string) =>
+    url.includes('youtube.com') || url.includes('youtu.be')
+
+  const getYouTubeEmbedUrl = (url: string) => {
+    if (url.includes('youtube.com/embed/')) return url
+
+    try {
+      const parsed = new URL(url)
+      const host = parsed.hostname.replace('www.', '')
+
+      if (host === 'youtu.be') {
+        const id = parsed.pathname.split('/')[1]
+        return id ? `https://www.youtube.com/embed/${id}` : url
+      }
+
+      if (host.endsWith('youtube.com')) {
+        const vParam = parsed.searchParams.get('v')
+        if (vParam) return `https://www.youtube.com/embed/${vParam}`
+
+        const parts = parsed.pathname.split('/').filter(Boolean)
+        if (parts[0] === 'shorts' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}`
+        if (parts[0] === 'embed' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}`
+        if (parts[0] === 'v' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}`
+        if (parts[0] === 'live' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}`
+      }
+    } catch {
+      // ignore parse errors
+    }
+
+    return url
+  }
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -272,8 +304,14 @@ export default function PortfolioPage() {
 
                           {/* Gallery Section */}
                           {project.gallery && project.gallery.length > 0 && (() => {
-                            const photos = project.gallery.filter(item => !item.toLowerCase().endsWith('.mp4'))
-                            const videos = project.gallery.filter(item => item.toLowerCase().endsWith('.mp4'))
+                            const photos = project.gallery.filter(item => {
+                              const lower = item.toLowerCase()
+                              return !lower.endsWith('.mp4') && !isYouTubeUrl(item)
+                            })
+                            const videos = project.gallery.filter(item => {
+                              const lower = item.toLowerCase()
+                              return lower.endsWith('.mp4') || isYouTubeUrl(item)
+                            })
 
                             return (
                               <div className="mb-12">
@@ -312,13 +350,25 @@ export default function PortfolioPage() {
                                           className="rounded-lg overflow-hidden shadow-md bg-charcoal w-full cursor-pointer group relative"
                                           onClick={() => setLightboxItem({ items: videos, index })}
                                         >
-                                          <video
-                                            preload="metadata"
-                                            className="w-full h-auto pointer-events-none"
-                                          >
-                                            <source src={video} type="video/mp4" />
-                                            Your browser does not support the video tag.
-                                          </video>
+                                          {isYouTubeUrl(video) ? (
+                                            <div className="aspect-video w-full pointer-events-none">
+                                              <iframe
+                                                src={getYouTubeEmbedUrl(video)}
+                                                className="w-full h-full"
+                                                title="YouTube video"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowFullScreen
+                                              />
+                                            </div>
+                                          ) : (
+                                            <video
+                                              preload="metadata"
+                                              className="w-full h-auto pointer-events-none"
+                                            >
+                                              <source src={video} type="video/mp4" />
+                                              Your browser does not support the video tag.
+                                            </video>
+                                          )}
                                           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/30">
                                             <Play className="w-16 h-16 text-white fill-white" />
                                           </div>
@@ -391,8 +441,19 @@ export default function PortfolioPage() {
                   {(() => {
                     const currentItem = lightboxItem.items[lightboxItem.index]
                     const isVideo = currentItem.toLowerCase().endsWith('.mp4')
+                    const isYouTube = isYouTubeUrl(currentItem)
 
-                    return isVideo ? (
+                    return isYouTube ? (
+                      <div className="w-full max-w-5xl aspect-video">
+                        <iframe
+                          src={getYouTubeEmbedUrl(currentItem)}
+                          className="w-full h-full rounded-lg shadow-2xl"
+                          title="YouTube video"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    ) : isVideo ? (
                       <video
                         key={currentItem}
                         controls
