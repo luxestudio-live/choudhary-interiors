@@ -88,13 +88,6 @@ function Navigation() {
             Portfolio
           </Link>
           <Link 
-            href="/designers" 
-            className="text-sm font-medium text-charcoal transition-colors hover:text-coral"
-            onClick={() => handleNavClick('/designers')}
-          >
-            Our Designers
-          </Link>
-          <Link 
             href="/pricing" 
             className="text-sm font-medium text-charcoal transition-colors hover:text-coral"
             onClick={() => handleNavClick('/pricing')}
@@ -159,13 +152,6 @@ function Navigation() {
               onClick={() => handleNavClick('/portfolio')}
             >
               Portfolio
-            </Link>
-            <Link 
-              href="/designers" 
-              className="py-3 text-base font-medium text-charcoal"
-              onClick={() => handleNavClick('/designers')}
-            >
-              Our Designers
             </Link>
             <Link 
               href="/pricing" 
