@@ -34,13 +34,27 @@ export default function PortfolioPage() {
     },
     {
       id: 2,
-      title: 'Master Bedroom Suite',
+      title: '3BHK Modern Home Design',
       category: 'Residential',
-      location: 'Mumbai',
-      image: '/choudhary-interiors/pf2.jpeg',
-      description: 'Elegant master bedroom with ambient lighting and premium furnishings.',
-      budget: '₹8 Lakhs',
-      timeline: '6 weeks'
+      location: 'Dombivali, Thane',
+      image: '/choudhary-interiors/po1.jpeg',
+      description: 'Beautifully designed 3BHK residential space featuring modern interiors with optimal space utilization and premium finishing.',
+      budget: '₹25 Lakhs',
+      timeline: '4 months',
+      gallery: [
+        '/choudhary-interiors/po1.jpeg',
+        '/choudhary-interiors/po2.jpeg',
+        '/choudhary-interiors/po3.jpeg',
+        '/choudhary-interiors/po4.jpeg',
+        '/choudhary-interiors/po5.jpeg',
+        '/choudhary-interiors/po6.jpeg',
+        '/choudhary-interiors/po7.jpeg',
+        '/choudhary-interiors/po8.jpeg',
+        '/choudhary-interiors/po9.jpeg',
+        '/choudhary-interiors/po10.jpeg'
+      ],
+      video: '/choudhary-interiors/po-video.mp4',
+      details: 'This 3BHK residential project in Dombivali showcases our expertise in creating functional and aesthetically pleasing modern homes. We transformed this property with careful space planning, contemporary design elements, and premium materials to create a comfortable living environment.'
     },
     {
       id: 3,
