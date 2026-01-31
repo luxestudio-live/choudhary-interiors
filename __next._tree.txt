@@ -1,5 +1,5 @@
 :HL["/choudhary-interiors/_next/static/chunks/2d83db6a6912b299.css","style"]
-:HL["/choudhary-interiors/_next/static/chunks/97b6823529006d10.css","style"]
+:HL["/choudhary-interiors/_next/static/chunks/78f8c4e562d087d6.css","style"]
 :HL["/choudhary-interiors/_next/static/media/47fe1b7cd6e6ed85-s.p.855a563b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/choudhary-interiors/_next/static/media/829ba4228c966254-s.p.a61bc753.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/choudhary-interiors/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -16,4 +16,4 @@
 :HL["/choudhary-interiors/images/kitchen.jpg","image"]
 :HL["/choudhary-interiors/images/bedroom.jpg","image"]
 :HL["/choudhary-interiors/images/wardrobe.jpg","image"]
-0:{"buildId":"I1p6PEPspYQhUdovCcCnJ","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"_U_UMY5gyeK6PJHLmCIy1","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
