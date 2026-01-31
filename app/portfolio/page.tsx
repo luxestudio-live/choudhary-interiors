@@ -15,21 +15,21 @@ export default function PortfolioPage() {
       title: '4BHK Premium Luxury Home',
       category: 'Residential',
       location: 'Nahur, Mumbai',
-      image: '/pf9.jpeg',
+      image: '/choudhary-interiors/pf9.jpeg',
       description: 'Stunning 4BHK luxury home featuring comprehensive interior design with contemporary aesthetics and premium finishes throughout all living spaces.',
       budget: '₹35 Lakhs',
       timeline: '5 months',
       gallery: [
-        '/pf1.jpeg',
-        '/pf2.jpeg',
-        '/pf3.jpeg',
-        '/pf4.jpeg',
-        '/pf5.jpeg',
-        '/pf6.jpeg',
-        '/pf7.jpeg',
-        '/pf8.jpeg'
+        '/choudhary-interiors/pf1.jpeg',
+        '/choudhary-interiors/pf2.jpeg',
+        '/choudhary-interiors/pf3.jpeg',
+        '/choudhary-interiors/pf4.jpeg',
+        '/choudhary-interiors/pf5.jpeg',
+        '/choudhary-interiors/pf6.jpeg',
+        '/choudhary-interiors/pf7.jpeg',
+        '/choudhary-interiors/pf8.jpeg'
       ],
-      video: '/p1-video.mp4',
+      video: '/choudhary-interiors/p1-video.mp4',
       details: 'This comprehensive 4BHK residential project in Nahur represents our commitment to excellence in luxury home design. We transformed this entire home with careful attention to detail, superior craftsmanship, and innovative design solutions across all spaces including bedrooms, living areas, kitchen, and more.'
     },
     {
@@ -37,7 +37,7 @@ export default function PortfolioPage() {
       title: 'Master Bedroom Suite',
       category: 'Residential',
       location: 'Mumbai',
-      image: '/pf2.jpeg',
+      image: '/choudhary-interiors/pf2.jpeg',
       description: 'Elegant master bedroom with ambient lighting and premium furnishings.',
       budget: '₹8 Lakhs',
       timeline: '6 weeks'
@@ -47,7 +47,7 @@ export default function PortfolioPage() {
       title: 'Contemporary Kitchen Design',
       category: 'Modular',
       location: 'Mumbai',
-      image: '/pf3.jpeg',
+      image: '/choudhary-interiors/pf3.jpeg',
       description: 'Modern modular kitchen with latest appliances and smart storage solutions.',
       budget: '₹12 Lakhs',
       timeline: '8 weeks'
@@ -57,7 +57,7 @@ export default function PortfolioPage() {
       title: 'Open Plan Living Space',
       category: 'Residential',
       location: 'Mumbai',
-      image: '/pf4.jpeg',
+      image: '/choudhary-interiors/pf4.jpeg',
       description: 'Spacious open-plan design combining living and dining areas seamlessly.',
       budget: '₹18 Lakhs',
       timeline: '3 months'
@@ -67,7 +67,7 @@ export default function PortfolioPage() {
       title: 'Kids Bedroom Design',
       category: 'Residential',
       location: 'Mumbai',
-      image: '/pf5.jpeg',
+      image: '/choudhary-interiors/pf5.jpeg',
       description: 'Fun and functional children\'s bedroom with creative design elements.',
       budget: '₹6 Lakhs',
       timeline: '4 weeks'
@@ -77,7 +77,7 @@ export default function PortfolioPage() {
       title: 'Walk-In Wardrobe',
       category: 'Modular',
       location: 'Mumbai',
-      image: '/pf6.jpeg',
+      image: '/choudhary-interiors/pf6.jpeg',
       description: 'Luxury walk-in closet with custom organization and elegant finishes.',
       budget: '₹10 Lakhs',
       timeline: '6 weeks'
@@ -87,7 +87,7 @@ export default function PortfolioPage() {
       title: 'Home Office Space',
       category: 'Commercial',
       location: 'Mumbai',
-      image: '/pf7.jpeg',
+      image: '/choudhary-interiors/pf7.jpeg',
       description: 'Modern home office designed for productivity with ergonomic solutions.',
       budget: '₹5 Lakhs',
       timeline: '3 weeks'
@@ -97,7 +97,7 @@ export default function PortfolioPage() {
       title: 'Luxury Bathroom',
       category: 'Residential',
       location: 'Mumbai',
-      image: '/pf8.jpeg',
+      image: '/choudhary-interiors/pf8.jpeg',
       description: 'Spa-like bathroom with premium fixtures and elegant marble finishes.',
       budget: '₹8 Lakhs',
       timeline: '5 weeks'
