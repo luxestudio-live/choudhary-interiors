@@ -61,7 +61,7 @@ export default function PortfolioPage() {
       title: '2BHK Renovation Project',
       category: 'Renovation',
       location: 'Bhandup, Mumbai',
-      image: '/choudhary-interiors/por-cover.jpeg',
+      image: '/choudhary-interiors/images/pf1.jpg',
       description: 'Complete 2BHK renovation featuring modern interiors, updated fixtures, and improved functionality.',
       gallery: [
         '/choudhary-interiors/por1.mp4',
@@ -91,39 +91,6 @@ export default function PortfolioPage() {
       ],
       video: '/choudhary-interiors/port-video1.mp4',
       details: 'This 1BHK project in Bhandup West focuses on space optimization and a clean, modern aesthetic. We combined practical storage, durable materials, and cozy finishes to make the apartment feel open, bright, and comfortable while keeping daily use effortless.'
-    },
-    {
-      id: 5,
-      title: '2BHK Interior Project',
-      category: 'Residential',
-      location: 'Bhandup, Mumbai',
-      image: '/choudhary-interiors/project10.jpeg',
-      description: 'Modern 2BHK interiors with balanced aesthetics, smart storage, and comfortable living spaces.',
-      gallery: [
-        '/choudhary-interiors/project1.jpeg',
-        '/choudhary-interiors/project2.jpeg',
-        '/choudhary-interiors/project3.jpeg',
-        '/choudhary-interiors/project4.jpeg',
-        '/choudhary-interiors/project5.jpeg',
-        '/choudhary-interiors/project6.jpeg',
-        '/choudhary-interiors/project7.jpeg',
-        '/choudhary-interiors/project8.jpeg',
-        '/choudhary-interiors/project9.jpeg',
-        '/choudhary-interiors/project10.jpeg'
-      ],
-      details: 'This 2BHK project in Bhandup showcases thoughtful space planning with warm finishes and functional storage. We focused on creating a cohesive look across the living room, bedrooms, and kitchen while maintaining a bright, inviting feel.'
-    },
-    {
-      id: 6,
-      title: '3BHK Interior Project',
-      category: 'Residential',
-      location: 'Dombivali, Mumbai',
-      image: '/choudhary-interiors/portfolio6.jpeg',
-      description: 'Elegant 3BHK interiors with cohesive styling, smart storage, and functional layouts.',
-      gallery: [
-        '/choudhary-interiors/portfolio6.jpeg'
-      ],
-      details: 'This 3BHK project in Dombivali focuses on creating a balanced, modern look across all rooms with thoughtful storage solutions and warm, livable finishes. The design delivers comfort, functionality, and a cohesive aesthetic throughout the home.'
     },
     {
       id: 7,
@@ -271,13 +238,16 @@ export default function PortfolioPage() {
                                   return (
                                     <div key={index} className="rounded-lg overflow-hidden shadow-md w-full">
                                       {isVideo ? (
-                                        <video
-                                          controls
-                                          className="w-full h-auto"
-                                        >
-                                          <source src={item} type="video/mp4" />
-                                          Your browser does not support the video tag.
-                                        </video>
+                                        <div className="bg-charcoal w-full">
+                                          <video
+                                            controls
+                                            preload="metadata"
+                                            className="w-full h-auto"
+                                          >
+                                            <source src={item} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                          </video>
+                                        </div>
                                       ) : (
                                         <img
                                           src={item}

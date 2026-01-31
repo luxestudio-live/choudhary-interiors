@@ -33,10 +33,10 @@ export default function ContactPage() {
   const offices = [
     {
       city: 'Mumbai',
-      address: '123 Design Lane, Mumbai, Maharashtra 400001',
+      address: 'Shop no. 2, Badwaik chawl, Lal Bahadur Shastri Marg, opp. Jain mandir, Kukreja, Govind Nagar, Bhandup West, Mumbai, Maharashtra 400078',
       phone: '+91 98765 43210',
       email: 'hello@choudharyinteriors.com',
-      hours: 'Mon - Sat, 10AM - 6PM'
+      hours: 'Mon - Sat, 9AM - 9PM'
     }
   ]
 
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-bold text-charcoal mb-2">Hours</h3>
                   <p className="text-charcoal font-medium">Mon - Sat</p>
-                  <p className="text-muted-foreground">10 AM - 6 PM IST</p>
+                  <p className="text-muted-foreground">9 AM - 9 PM IST</p>
                 </div>
               </div>
 
