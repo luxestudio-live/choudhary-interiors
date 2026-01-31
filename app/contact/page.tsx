@@ -258,7 +258,7 @@ export default function ContactPage() {
               {/* Map Embed */}
               <div className="rounded-2xl overflow-hidden shadow-lg h-96 lg:h-full min-h-96">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.4829827726444!2d72.93387757588308!3d19.14429058207064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b91b7c7d0c0d%3A0x0!2zMTnCsDA4JzM5LjQiTiA3MsKwNTYnMTAuMCJF!5e0!3m2!1sen!2sin!4v1706799999999!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.4955782753744!2d72.93556287588306!3d19.14311808207194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b91ac4c8c5c3%3A0x5e3f3e3e3e3e3e3e!2sShop%20no.%202%2C%20Badwaik%20chawl%2C%20Lal%20Bahadur%20Shastri%20Marg%2C%20opp.%20Jain%20mandir%2C%20Kukreja%2C%20Govind%20Nagar%2C%20Bhandup%20West%2C%20Mumbai%2C%20Maharashtra%20400078!5e0!3m2!1sen!2sin!4v1706799999999!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -303,7 +303,7 @@ export default function ContactPage() {
                 </div>
 
                 <a 
-                  href="https://maps.app.goo.gl/fGSQzT1v7Jz4C4m2A" 
+                  href="https://maps.app.goo.gl/6ahgVS1xEw4fR1ao9" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >

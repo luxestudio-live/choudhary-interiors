@@ -4,10 +4,11 @@ import Footer from '@/components/footer'
 import { useState } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { X, Play } from 'lucide-react'
+import { X, Play, ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function PortfolioPage() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null)
+  const [lightboxItem, setLightboxItem] = useState<{ items: string[], index: number } | null>(null)
 
   const projects = [
     {
@@ -93,24 +94,37 @@ export default function PortfolioPage() {
       details: 'This 1BHK project in Bhandup West focuses on space optimization and a clean, modern aesthetic. We combined practical storage, durable materials, and cozy finishes to make the apartment feel open, bright, and comfortable while keeping daily use effortless.'
     },
     {
-      id: 7,
-      title: 'Home Office Space',
-      category: 'Commercial',
-      location: 'Mumbai',
-      image: '/choudhary-interiors/pf7.jpeg',
-      description: 'Modern home office designed for productivity with ergonomic solutions.',
-      budget: '₹5 Lakhs',
-      timeline: '3 weeks'
+      id: 5,
+      title: '2BHK Interior Project',
+      category: 'Residential',
+      location: 'Bhandup, Mumbai',
+      image: '/choudhary-interiors/project10.jpeg',
+      description: 'Modern 2BHK interiors with balanced aesthetics, smart storage, and comfortable living spaces.',
+      gallery: [
+        '/choudhary-interiors/project1.jpeg',
+        '/choudhary-interiors/project2.jpeg',
+        '/choudhary-interiors/project3.jpeg',
+        '/choudhary-interiors/project4.jpeg',
+        '/choudhary-interiors/project5.jpeg',
+        '/choudhary-interiors/project6.jpeg',
+        '/choudhary-interiors/project7.jpeg',
+        '/choudhary-interiors/project8.jpeg',
+        '/choudhary-interiors/project9.jpeg',
+        '/choudhary-interiors/project10.jpeg'
+      ],
+      details: 'This 2BHK project in Bhandup showcases thoughtful space planning with warm finishes and functional storage. We focused on creating a cohesive look across the living room, bedrooms, and kitchen while maintaining a bright, inviting feel.'
     },
     {
-      id: 8,
-      title: 'Luxury Bathroom',
+      id: 6,
+      title: '3BHK Interior Project',
       category: 'Residential',
-      location: 'Mumbai',
-      image: '/choudhary-interiors/pf8.jpeg',
-      description: 'Spa-like bathroom with premium fixtures and elegant marble finishes.',
-      budget: '₹8 Lakhs',
-      timeline: '5 weeks'
+      location: 'Dombivali, Mumbai',
+      image: '/choudhary-interiors/portfolio6.jpeg',
+      description: 'Elegant 3BHK interiors with cohesive styling, smart storage, and functional layouts.',
+      gallery: [
+        '/choudhary-interiors/portfolio6.jpeg'
+      ],
+      details: 'This 3BHK project in Dombivali focuses on creating a balanced, modern look across all rooms with thoughtful storage solutions and warm, livable finishes. The design delivers comfort, functionality, and a cohesive aesthetic throughout the home.'
     },
     {
       id: 9,
@@ -242,11 +256,15 @@ export default function PortfolioPage() {
                                     <h4 className="text-xl font-semibold text-charcoal mb-4">Photos</h4>
                                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                       {photos.map((photo, index) => (
-                                        <div key={index} className="rounded-lg overflow-hidden shadow-md w-full">
+                                        <div 
+                                          key={index} 
+                                          className="rounded-lg overflow-hidden shadow-md w-full cursor-pointer group"
+                                          onClick={() => setLightboxItem({ items: photos, index })}
+                                        >
                                           <img
                                             src={photo}
                                             alt={`Photo ${index + 1}`}
-                                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                           />
                                         </div>
                                       ))}
@@ -260,15 +278,21 @@ export default function PortfolioPage() {
                                     <h4 className="text-xl font-semibold text-charcoal mb-4">Videos</h4>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                       {videos.map((video, index) => (
-                                        <div key={index} className="rounded-lg overflow-hidden shadow-md bg-charcoal w-full">
+                                        <div 
+                                          key={index} 
+                                          className="rounded-lg overflow-hidden shadow-md bg-charcoal w-full cursor-pointer group relative"
+                                          onClick={() => setLightboxItem({ items: videos, index })}
+                                        >
                                           <video
-                                            controls
                                             preload="metadata"
-                                            className="w-full h-auto"
+                                            className="w-full h-auto pointer-events-none"
                                           >
                                             <source src={video} type="video/mp4" />
                                             Your browser does not support the video tag.
                                           </video>
+                                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/30">
+                                            <Play className="w-16 h-16 text-white fill-white" />
+                                          </div>
                                         </div>
                                       ))}
                                     </div>
@@ -287,6 +311,76 @@ export default function PortfolioPage() {
                         </div>
                       ))}
                   </div>
+                </div>
+              </div>
+            )}
+
+            {/* Lightbox Modal */}
+            {lightboxItem && (
+              <div className="fixed inset-0 bg-black/95 z-[60] flex items-center justify-center p-4">
+                {/* Close Button */}
+                <button
+                  onClick={() => setLightboxItem(null)}
+                  className="absolute top-4 right-4 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-10"
+                >
+                  <X className="w-6 h-6 text-white" />
+                </button>
+
+                {/* Navigation Buttons */}
+                {lightboxItem.items.length > 1 && (
+                  <>
+                    <button
+                      onClick={() => setLightboxItem(prev => prev ? {
+                        ...prev,
+                        index: prev.index > 0 ? prev.index - 1 : prev.items.length - 1
+                      } : null)}
+                      className="absolute left-4 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-10"
+                    >
+                      <ChevronLeft className="w-8 h-8 text-white" />
+                    </button>
+                    <button
+                      onClick={() => setLightboxItem(prev => prev ? {
+                        ...prev,
+                        index: prev.index < prev.items.length - 1 ? prev.index + 1 : 0
+                      } : null)}
+                      className="absolute right-4 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors z-10"
+                    >
+                      <ChevronRight className="w-8 h-8 text-white" />
+                    </button>
+                  </>
+                )}
+
+                {/* Counter */}
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-white/10 px-4 py-2 rounded-full">
+                  <p className="text-white text-sm font-medium">
+                    {lightboxItem.index + 1} / {lightboxItem.items.length}
+                  </p>
+                </div>
+
+                {/* Content */}
+                <div className="max-w-6xl w-full h-full flex items-center justify-center">
+                  {(() => {
+                    const currentItem = lightboxItem.items[lightboxItem.index]
+                    const isVideo = currentItem.toLowerCase().endsWith('.mp4')
+
+                    return isVideo ? (
+                      <video
+                        key={currentItem}
+                        controls
+                        autoPlay
+                        className="max-w-full max-h-[85vh] rounded-lg shadow-2xl"
+                      >
+                        <source src={currentItem} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <img
+                        src={currentItem}
+                        alt={`Item ${lightboxItem.index + 1}`}
+                        className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
+                      />
+                    )
+                  })()}
                 </div>
               </div>
             )}
