@@ -63,8 +63,11 @@ export default function ReviewsPage() {
           updatedAt: new Date(),
         });
       } else {
+        // For new reviews, calculate order: default reviews (3) + existing Firestore reviews
+        const nextOrder = 3 + reviews.length;
         await addDoc(collection(db, 'reviews'), {
           ...formData,
+          order: nextOrder,
           createdAt: new Date(),
           updatedAt: new Date(),
         });

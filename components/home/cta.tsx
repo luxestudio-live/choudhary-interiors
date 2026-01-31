@@ -23,7 +23,7 @@ export default function CTA() {
                 Schedule Consultation <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
-            <Link href="tel:+919999999999">
+            <Link href="tel:+918828380687">
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 gap-2 bg-transparent transition-transform hover:scale-105">
                 <Phone className="w-4 h-4" /> Call Us
               </Button>
@@ -38,8 +38,8 @@ export default function CTA() {
             </div>
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <a href="tel:+919999999999" className="hover:text-white transition">
-                +91 99999 99999
+              <a href="tel:+918828380687" className="hover:text-white transition">
+                +91 88283 80687
               </a>
             </div>
           </div>

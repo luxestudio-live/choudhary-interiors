@@ -50,7 +50,7 @@ export default function ContactPage() {
     {
       city: 'Mumbai',
       address: 'Shop no. 2, Badwaik chawl, Lal Bahadur Shastri Marg, opp. Jain mandir, Kukreja, Govind Nagar, Bhandup West, Mumbai, Maharashtra 400078',
-      phone: '+91 98765 43210',
+      phone: '+91 88283 80687',
       email: 'hello@choudharyinteriors.com',
       hours: 'Mon - Sat, 9AM - 9PM'
     }
@@ -85,8 +85,8 @@ export default function ContactPage() {
                       <Phone className="w-6 h-6 text-coral" />
                     </div>
                     <h3 className="font-bold text-charcoal mb-2 group-hover:text-coral transition-colors">Phone</h3>
-                    <a href="tel:+919876543210" className="text-coral hover:text-coral/80 font-medium transition-colors">
-                      +91 98765 43210
+                    <a href="tel:+918828380687" className="text-coral hover:text-coral/80 font-medium transition-colors">
+                      +91 88283 80687
                     </a>
                   </div>
                 </div>

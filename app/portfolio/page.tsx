@@ -1,16 +1,19 @@
 "use client";
 import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { X, Play, ChevronLeft, ChevronRight } from 'lucide-react'
+import { getProjects } from '@/lib/firestore-helpers'
 
 export default function PortfolioPage() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null)
   const [lightboxItem, setLightboxItem] = useState<{ items: string[], index: number } | null>(null)
+  const [firestoreProjects, setFirestoreProjects] = useState<any[]>([])
 
-  const projects = [
+  // Hardcoded existing projects (will always appear first)
+  const hardcodedProjects = [
     {
       id: 1,
       title: '4 BHK Premium Luxury Home',
@@ -150,6 +153,29 @@ export default function PortfolioPage() {
     }
   ]
 
+  // Load Firestore projects on mount
+  useEffect(() => {
+    const loadFirestoreProjects = async () => {
+      try {
+        const firestoreData = await getProjects()
+        setFirestoreProjects(firestoreData)
+      } catch (error) {
+        console.error('Error loading Firestore projects:', error)
+      }
+    }
+    loadFirestoreProjects()
+  }, [])
+
+  // Combine projects: hardcoded first, then Firestore projects
+  const allProjects = [
+    ...hardcodedProjects,
+    ...firestoreProjects.map((proj) => ({
+      ...proj,
+      gallery: proj.images || [],
+      video: proj.videos?.[0] || null
+    }))
+  ]
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -171,7 +197,7 @@ export default function PortfolioPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Projects Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-              {projects.map((project) => (
+              {allProjects.map((project) => (
                 <div 
                   key={project.id} 
                   className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer"
@@ -189,7 +215,7 @@ export default function PortfolioPage() {
                         {project.category}
                       </span>
                     </div>
-                    {project.video && (
+                    {(project.video || (project.gallery && project.gallery.some((item: string) => item.includes('youtube.com')))) && (
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <div className="w-16 h-16 rounded-full bg-coral flex items-center justify-center">
                           <Play className="w-8 h-8 text-white fill-white" />

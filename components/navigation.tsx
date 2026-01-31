@@ -105,9 +105,9 @@ function Navigation() {
 
         {/* Desktop CTA */}
         <div className="hidden items-center gap-4 lg:flex">
-          <Link href="tel:+919876543210" className="flex items-center gap-2 text-sm font-medium text-charcoal">
+          <Link href="tel:+918828380687" className="flex items-center gap-2 text-sm font-medium text-charcoal">
             <Phone className="h-4 w-4 text-teal" />
-            +91 98765 43210
+            +91 88283 80687
           </Link>
           <Button asChild className="bg-coral text-primary-foreground hover:bg-coral/90">
             <Link href="/contact">Book Consultation</Link>
@@ -175,9 +175,9 @@ function Navigation() {
               Contact
             </Link>
             <div className="mt-4 flex flex-col gap-3">
-              <Link href="tel:+919876543210" className="flex items-center gap-2 text-sm font-medium text-charcoal">
+              <Link href="tel:+918828380687" className="flex items-center gap-2 text-sm font-medium text-charcoal">
                 <Phone className="h-4 w-4 text-teal" />
-                +91 98765 43210
+                +91 88283 80687
               </Link>
               <Button asChild className="w-full bg-coral text-primary-foreground hover:bg-coral/90">
                 <Link href="/contact">Book Free Consultation</Link>

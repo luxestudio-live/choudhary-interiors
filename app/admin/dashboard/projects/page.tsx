@@ -73,8 +73,11 @@ export default function ProjectsPage() {
           updatedAt: new Date(),
         });
       } else {
+        // For new projects, calculate order: hardcoded projects (7) + existing Firestore projects
+        const nextOrder = 7 + projects.length;
         await addDoc(collection(db, 'projects'), {
           ...formData,
+          order: nextOrder,
           createdAt: new Date(),
           updatedAt: new Date(),
         });

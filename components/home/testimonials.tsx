@@ -4,7 +4,7 @@ import { Star } from 'lucide-react'
 import { ScrollFadeIn } from '@/components/ui/scroll-fade-in'
 import { getReviews } from '@/lib/firestore-helpers'
 
-// Fallback testimonials
+// Fallback testimonials - Always display first
 const defaultTestimonials = [
   {
     name: 'Nadeem Khan',
@@ -31,9 +31,14 @@ export default function Testimonials() {
 
   useEffect(() => {
     const fetchTestimonials = async () => {
-      const reviews = await getReviews()
-      if (reviews.length > 0) {
-        setTestimonials(reviews)
+      try {
+        const firestoreReviews = await getReviews()
+        // Combine: default reviews first (order 0-2), then Firestore reviews appended
+        const combinedReviews = [...defaultTestimonials, ...firestoreReviews]
+        setTestimonials(combinedReviews)
+      } catch (error) {
+        console.error('Error loading reviews:', error)
+        setTestimonials(defaultTestimonials)
       }
     }
     fetchTestimonials()

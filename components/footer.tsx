@@ -100,9 +100,15 @@ function Footer() {
                 </span>
               </li>
               <li>
-                <Link href="tel:+919876543210" className="flex items-center gap-3 text-sm text-gray-400 transition-colors hover:text-coral">
+                <Link href="tel:+918828380687" className="flex items-center gap-3 text-sm text-gray-400 transition-colors hover:text-coral">
                   <Phone className="h-5 w-5 shrink-0 text-teal" />
-                  +91 98765 43210
+                  +91 88283 80687
+                </Link>
+              </li>
+              <li>
+                <Link href="https://wa.me/918828380687" target="_blank" className="flex items-center gap-3 text-sm text-gray-400 transition-colors hover:text-coral">
+                  <Phone className="h-5 w-5 shrink-0 text-teal" />
+                  WhatsApp: +91 88283 80687
                 </Link>
               </li>
               <li>
