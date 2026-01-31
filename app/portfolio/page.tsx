@@ -58,43 +58,69 @@ export default function PortfolioPage() {
     },
     {
       id: 3,
-      title: 'Contemporary Kitchen Design',
-      category: 'Modular',
-      location: 'Mumbai',
-      image: '/choudhary-interiors/pf3.jpeg',
-      description: 'Modern modular kitchen with latest appliances and smart storage solutions.',
-      budget: '₹12 Lakhs',
-      timeline: '8 weeks'
+      title: '2BHK Renovation Project',
+      category: 'Renovation',
+      location: 'Bhandup, Mumbai',
+      image: '/choudhary-interiors/por-cover.jpeg',
+      description: 'Complete 2BHK renovation featuring modern interiors, updated fixtures, and improved functionality.',
+      gallery: [
+        '/choudhary-interiors/por1.mp4',
+        '/choudhary-interiors/por2.mp4',
+        '/choudhary-interiors/por3.mp4',
+        '/choudhary-interiors/por4.mp4',
+        '/choudhary-interiors/por5.mp4',
+        '/choudhary-interiors/por6.mp4',
+        '/choudhary-interiors/por7.mp4'
+      ],
+      video: '/choudhary-interiors/por1.mp4',
+      details: 'This 2BHK renovation project in Bhandup demonstrates our expertise in transforming existing spaces. We modernized the layout, updated all fixtures and fittings, and introduced contemporary design elements to create a fresh, functional living space that meets modern lifestyle needs.'
     },
     {
       id: 4,
       title: 'Open Plan Living Space',
       category: 'Residential',
       location: 'Mumbai',
-      image: '/choudhary-interiors/pf4.jpeg',
+      image: '/choudhary-interiors/port1.jpeg',
       description: 'Spacious open-plan design combining living and dining areas seamlessly.',
-      budget: '₹18 Lakhs',
-      timeline: '3 months'
+      gallery: [
+        '/choudhary-interiors/port1.jpeg',
+        '/choudhary-interiors/port2.jpeg'
+      ],
+      video: '/choudhary-interiors/port-video1.mp4',
+      details: 'This open plan living space project showcases our expertise in creating seamless, flowing interiors. We designed this space to maximize light and create a cohesive living experience, combining the living and dining areas with modern aesthetics and functional design solutions.'
     },
     {
       id: 5,
       title: 'Kids Bedroom Design',
       category: 'Residential',
       location: 'Mumbai',
-      image: '/choudhary-interiors/pf5.jpeg',
+      image: '/choudhary-interiors/project1.jpeg',
       description: 'Fun and functional children\'s bedroom with creative design elements.',
-      budget: '₹6 Lakhs',
-      timeline: '4 weeks'
+      gallery: [
+        '/choudhary-interiors/project1.jpeg',
+        '/choudhary-interiors/project2.jpeg',
+        '/choudhary-interiors/project3.jpeg',
+        '/choudhary-interiors/project4.jpeg',
+        '/choudhary-interiors/project5.jpeg',
+        '/choudhary-interiors/project6.jpeg',
+        '/choudhary-interiors/project7.jpeg',
+        '/choudhary-interiors/project8.jpeg',
+        '/choudhary-interiors/project9.jpeg',
+        '/choudhary-interiors/project10.jpeg'
+      ],
+      details: 'This creative kids bedroom design combines fun aesthetics with practical functionality. We created a vibrant, safe, and imaginative space that grows with the child, incorporating storage solutions, study areas, and play zones seamlessly.'
     },
     {
       id: 6,
       title: 'Walk-In Wardrobe',
       category: 'Modular',
       location: 'Mumbai',
-      image: '/choudhary-interiors/pf6.jpeg',
+      image: '/choudhary-interiors/portfolio6.jpeg',
       description: 'Luxury walk-in closet with custom organization and elegant finishes.',
-      budget: '₹10 Lakhs',
-      timeline: '6 weeks'
+      gallery: [
+        '/choudhary-interiors/portfolio6.jpeg'
+      ],
+      details: 'This luxury walk-in wardrobe project showcases our expertise in creating bespoke storage solutions. With custom organization systems, elegant finishes, and premium materials, we designed a sophisticated space that combines functionality with aesthetic appeal.'
     },
     {
       id: 7,
@@ -171,16 +197,7 @@ export default function PortfolioPage() {
                     <p className="text-muted-foreground text-sm mb-4">{project.location}</p>
                     <p className="text-charcoal text-sm mb-6 leading-relaxed">{project.description}</p>
                     
-                    <div className="grid grid-cols-2 gap-4 mb-6 pb-6 border-b border-ash">
-                      <div>
-                        <p className="text-xs text-muted-foreground mb-1">Budget</p>
-                        <p className="font-semibold text-charcoal">{project.budget}</p>
-                      </div>
-                      <div>
-                        <p className="text-xs text-muted-foreground mb-1">Timeline</p>
-                        <p className="font-semibold text-charcoal">{project.timeline}</p>
-                      </div>
-                    </div>
+
 
                     <Button 
                       className="w-full bg-coral hover:bg-coral/90 text-white"
