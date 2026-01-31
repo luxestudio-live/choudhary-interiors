@@ -90,8 +90,6 @@ export default function PortfolioPage() {
     }
   ]
 
-  const categories = ['All', 'Residential', 'Modular', 'Commercial']
-
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -111,22 +109,6 @@ export default function PortfolioPage() {
         {/* Portfolio Grid */}
         <section className="py-16 sm:py-24 bg-soft-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Filter Tabs */}
-            <div className="flex flex-wrap gap-3 justify-center mb-16">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className={`px-6 py-2 rounded-full font-medium transition-all ${
-                    category === 'All'
-                      ? 'bg-coral text-white'
-                      : 'bg-white text-charcoal border border-ash hover:border-coral'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-
             {/* Projects Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
               {projects.map((project) => (

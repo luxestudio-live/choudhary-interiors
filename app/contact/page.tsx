@@ -244,6 +244,78 @@ export default function ContactPage() {
           </div>
         </section>
 
+        {/* Map Section */}
+        <section className="py-16 sm:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-charcoal mb-4">Visit Our Studio</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Located in the heart of Mumbai, our design studio is open for consultations and project discussions.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Map Embed */}
+              <div className="rounded-2xl overflow-hidden shadow-lg h-96 lg:h-full min-h-96">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5355149829606!2d72.8479!3d19.0760!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9fbd9c7c7c7%3A0x0!2sDesign%20Lane%2C%20Mumbai!5e0!3m2!1sen!2sin!4v1706693400000"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+
+              {/* Location Info */}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-charcoal mb-4">choudhary Interiors Studio</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-4">
+                      <MapPin className="w-6 h-6 text-coral flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-charcoal mb-1">Address</p>
+                        <p className="text-muted-foreground">123 Design Lane, Mumbai, Maharashtra 400001, India</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <Phone className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-charcoal mb-1">Phone</p>
+                        <a href="tel:+919876543210" className="text-teal hover:text-teal/80 font-medium">
+                          +91 98765 43210
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <Clock className="w-6 h-6 text-yellow flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-semibold text-charcoal mb-1">Hours</p>
+                        <p className="text-muted-foreground">Monday - Saturday</p>
+                        <p className="text-muted-foreground">10:00 AM - 6:00 PM IST</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <a 
+                  href="https://share.google/bSTP5khFI4g821gqm" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="w-full bg-coral hover:bg-coral/90 text-white">
+                    Get Directions
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-16 sm:py-24 bg-gradient-to-br from-charcoal to-charcoal/80">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
