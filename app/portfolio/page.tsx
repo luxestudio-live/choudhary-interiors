@@ -180,8 +180,10 @@ export default function PortfolioPage() {
   const isYouTubeUrl = (url: string) =>
     url.includes('youtube.com') || url.includes('youtu.be')
 
-  const getYouTubeEmbedUrl = (url: string) => {
-    if (url.includes('youtube.com/embed/')) return url
+  const getYouTubeEmbedUrl = (url: string, autoplay = false) => {
+    if (url.includes('youtube.com/embed/')) {
+      return autoplay ? `${url}${url.includes('?') ? '&' : '?'}autoplay=1&mute=1` : url
+    }
 
     try {
       const parsed = new URL(url)
@@ -189,24 +191,55 @@ export default function PortfolioPage() {
 
       if (host === 'youtu.be') {
         const id = parsed.pathname.split('/')[1]
-        return id ? `https://www.youtube.com/embed/${id}` : url
+        return id ? `https://www.youtube.com/embed/${id}${autoplay ? '?autoplay=1&mute=1' : ''}` : url
       }
 
       if (host.endsWith('youtube.com')) {
         const vParam = parsed.searchParams.get('v')
-        if (vParam) return `https://www.youtube.com/embed/${vParam}`
+        if (vParam) return `https://www.youtube.com/embed/${vParam}${autoplay ? '?autoplay=1&mute=1' : ''}`
 
         const parts = parsed.pathname.split('/').filter(Boolean)
-        if (parts[0] === 'shorts' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}`
-        if (parts[0] === 'embed' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}`
-        if (parts[0] === 'v' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}`
-        if (parts[0] === 'live' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}`
+        if (parts[0] === 'shorts' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}${autoplay ? '?autoplay=1&mute=1' : ''}`
+        if (parts[0] === 'embed' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}${autoplay ? '?autoplay=1&mute=1' : ''}`
+        if (parts[0] === 'v' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}${autoplay ? '?autoplay=1&mute=1' : ''}`
+        if (parts[0] === 'live' && parts[1]) return `https://www.youtube.com/embed/${parts[1]}${autoplay ? '?autoplay=1&mute=1' : ''}`
       }
     } catch {
       // ignore parse errors
     }
 
-    return url
+    const base = url
+    return autoplay ? `${base}?autoplay=1&mute=1` : base
+  }
+
+  const getYouTubeId = (url: string) => {
+    if (url.includes('youtube.com/embed/')) {
+      return url.split('/embed/')[1]?.split('?')[0] || ''
+    }
+
+    try {
+      const parsed = new URL(url)
+      const host = parsed.hostname.replace('www.', '')
+
+      if (host === 'youtu.be') {
+        return parsed.pathname.split('/')[1] || ''
+      }
+
+      if (host.endsWith('youtube.com')) {
+        const vParam = parsed.searchParams.get('v')
+        if (vParam) return vParam
+
+        const parts = parsed.pathname.split('/').filter(Boolean)
+        if (parts[0] === 'shorts' && parts[1]) return parts[1]
+        if (parts[0] === 'embed' && parts[1]) return parts[1]
+        if (parts[0] === 'v' && parts[1]) return parts[1]
+        if (parts[0] === 'live' && parts[1]) return parts[1]
+      }
+    } catch {
+      // ignore parse errors
+    }
+
+    return ''
   }
 
   return (
@@ -351,14 +384,16 @@ export default function PortfolioPage() {
                                           onClick={() => setLightboxItem({ items: videos, index })}
                                         >
                                           {isYouTubeUrl(video) ? (
-                                            <div className="aspect-video w-full pointer-events-none">
-                                              <iframe
-                                                src={getYouTubeEmbedUrl(video)}
-                                                className="w-full h-full"
-                                                title="YouTube video"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen
-                                              />
+                                            <div className="aspect-video w-full relative">
+                                              {getYouTubeId(video) ? (
+                                                <img
+                                                  src={`https://img.youtube.com/vi/${getYouTubeId(video)}/hqdefault.jpg`}
+                                                  alt="YouTube thumbnail"
+                                                  className="w-full h-full object-cover"
+                                                />
+                                              ) : (
+                                                <div className="w-full h-full bg-charcoal" />
+                                              )}
                                             </div>
                                           ) : (
                                             <video
@@ -446,7 +481,7 @@ export default function PortfolioPage() {
                     return isYouTube ? (
                       <div className="w-full max-w-5xl aspect-video">
                         <iframe
-                          src={getYouTubeEmbedUrl(currentItem)}
+                          src={getYouTubeEmbedUrl(currentItem, true)}
                           className="w-full h-full rounded-lg shadow-2xl"
                           title="YouTube video"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
