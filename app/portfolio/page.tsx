@@ -28,7 +28,8 @@ export default function PortfolioPage() {
         '/choudhary-interiors/pf5.jpeg',
         '/choudhary-interiors/pf6.jpeg',
         '/choudhary-interiors/pf7.jpeg',
-        '/choudhary-interiors/pf8.jpeg'
+        '/choudhary-interiors/pf8.jpeg',
+        '/choudhary-interiors/p1-video.mp4'
       ],
       video: '/choudhary-interiors/p1-video.mp4',
       details: 'This comprehensive 4BHK residential project in Nahur represents our commitment to excellence in luxury home design. We transformed this entire home with careful attention to detail, superior craftsmanship, and innovative design solutions across all spaces including bedrooms, living areas, kitchen, and more.'
@@ -52,7 +53,8 @@ export default function PortfolioPage() {
         '/choudhary-interiors/po7.jpeg',
         '/choudhary-interiors/po8.jpeg',
         '/choudhary-interiors/po9.jpeg',
-        '/choudhary-interiors/po10.jpeg'
+        '/choudhary-interiors/po10.jpeg',
+        '/choudhary-interiors/po-video.mp4'
       ],
       video: '/choudhary-interiors/po-video.mp4',
       details: 'This 3BHK residential project in Dombivali showcases our expertise in creating functional and aesthetically pleasing modern homes. We transformed this property with careful space planning, contemporary design elements, and premium materials to create a comfortable living environment.'
@@ -217,9 +219,9 @@ export default function PortfolioPage() {
             {/* Project Modal */}
             {selectedProject && (
               <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-                <div className="bg-white rounded-2xl max-w-4xl max-h-[90vh] overflow-y-auto w-full">
+                <div className="bg-white rounded-2xl max-w-4xl max-h-[90vh] overflow-y-auto w-full relative">
                   {/* Close Button */}
-                  <div className="sticky top-0 flex justify-end p-4 bg-white border-b">
+                  <div className="sticky top-0 flex justify-end p-4 bg-white border-b z-20">
                     <button
                       onClick={() => setSelectedProject(null)}
                       className="p-2 hover:bg-soft-white rounded-lg transition-colors"
@@ -229,7 +231,7 @@ export default function PortfolioPage() {
                   </div>
 
                   {/* Modal Content */}
-                  <div className="p-8">
+                  <div className="p-8 relative z-10">
                     {projects
                       .filter((p) => p.id === selectedProject)
                       .map((project) => (
