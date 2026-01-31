@@ -15,21 +15,21 @@ export default function PortfolioPage() {
       title: '4BHK Premium Luxury Home',
       category: 'Residential',
       location: 'Nahur, Mumbai',
-      image: '/choudhary-interiors/images/pf9.jpeg',
+      image: '/pf9.jpeg',
       description: 'Stunning 4BHK luxury home featuring comprehensive interior design with contemporary aesthetics and premium finishes throughout all living spaces.',
       budget: '₹35 Lakhs',
       timeline: '5 months',
       gallery: [
-        '/choudhary-interiors/images/pf1.jpeg',
-        '/choudhary-interiors/images/pf2.jpeg',
-        '/choudhary-interiors/images/pf3.jpeg',
-        '/choudhary-interiors/images/pf4.jpeg',
-        '/choudhary-interiors/images/pf5.jpeg',
-        '/choudhary-interiors/images/pf6.jpeg',
-        '/choudhary-interiors/images/pf7.jpeg',
-        '/choudhary-interiors/images/pf8.jpeg'
+        '/pf1.jpeg',
+        '/pf2.jpeg',
+        '/pf3.jpeg',
+        '/pf4.jpeg',
+        '/pf5.jpeg',
+        '/pf6.jpeg',
+        '/pf7.jpeg',
+        '/pf8.jpeg'
       ],
-      video: '/choudhary-interiors/videos/p1-video.mp4',
+      video: '/p1-video.mp4',
       details: 'This comprehensive 4BHK residential project in Nahur represents our commitment to excellence in luxury home design. We transformed this entire home with careful attention to detail, superior craftsmanship, and innovative design solutions across all spaces including bedrooms, living areas, kitchen, and more.'
     },
     {
