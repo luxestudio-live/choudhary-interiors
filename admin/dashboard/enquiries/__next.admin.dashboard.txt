@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[89896,["/choudhary-interiors/_next/static/chunks/3337476739009024.js","/choudhary-interiors/_next/static/chunks/cc1c88799edfe106.js"],"ClientSegmentRoot"]
+3:I[95113,["/choudhary-interiors/_next/static/chunks/54c01dbf3142d5de.js","/choudhary-interiors/_next/static/chunks/f18ce5141f6a17e5.js","/choudhary-interiors/_next/static/chunks/b3d428c2e7ea94b5.js"],"default"]
+4:I[42869,["/choudhary-interiors/_next/static/chunks/3337476739009024.js","/choudhary-interiors/_next/static/chunks/cc1c88799edfe106.js"],"default"]
+5:I[63587,["/choudhary-interiors/_next/static/chunks/3337476739009024.js","/choudhary-interiors/_next/static/chunks/cc1c88799edfe106.js"],"default"]
+0:{"buildId":"8ByM5BS8g-xc0R1-1CVFO","rsc":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/choudhary-interiors/_next/static/chunks/b3d428c2e7ea94b5.js","async":true}]],["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]},"serverProvidedParams":{"params":{},"promises":["$@6"]}}]]}],"loading":null,"isPartial":false}
+6:"$0:rsc:props:children:1:props:serverProvidedParams:params"
