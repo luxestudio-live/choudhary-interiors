@@ -37,7 +37,7 @@ export default function PortfolioPage() {
       title: '3BHK Modern Home Design',
       category: 'Residential',
       location: 'Dombivali, Thane',
-      image: '/choudhary-interiors/po1.jpeg',
+      image: '/choudhary-interiors/po5.jpeg',
       description: 'Beautifully designed 3BHK residential space featuring modern interiors with optimal space utilization and premium finishing.',
       budget: '₹25 Lakhs',
       timeline: '4 months',
@@ -77,25 +77,28 @@ export default function PortfolioPage() {
     },
     {
       id: 4,
-      title: 'Open Plan Living Space',
+      title: '1BHK Interior Project',
       category: 'Residential',
-      location: 'Mumbai',
+      location: 'Bhandup West, Mumbai',
       image: '/choudhary-interiors/port1.jpeg',
-      description: 'Spacious open-plan design combining living and dining areas seamlessly.',
+      description: 'Compact 1BHK interior with smart storage, warm finishes, and a functional layout.',
       gallery: [
         '/choudhary-interiors/port1.jpeg',
-        '/choudhary-interiors/port2.jpeg'
+        '/choudhary-interiors/port2.jpeg',
+        '/choudhary-interiors/port-video1.mp4',
+        '/choudhary-interiors/port-video2.mp4',
+        '/choudhary-interiors/port-video3.mp4'
       ],
       video: '/choudhary-interiors/port-video1.mp4',
-      details: 'This open plan living space project showcases our expertise in creating seamless, flowing interiors. We designed this space to maximize light and create a cohesive living experience, combining the living and dining areas with modern aesthetics and functional design solutions.'
+      details: 'This 1BHK project in Bhandup West focuses on space optimization and a clean, modern aesthetic. We combined practical storage, durable materials, and cozy finishes to make the apartment feel open, bright, and comfortable while keeping daily use effortless.'
     },
     {
       id: 5,
-      title: 'Kids Bedroom Design',
+      title: '2BHK Interior Project',
       category: 'Residential',
-      location: 'Mumbai',
-      image: '/choudhary-interiors/project1.jpeg',
-      description: 'Fun and functional children\'s bedroom with creative design elements.',
+      location: 'Bhandup, Mumbai',
+      image: '/choudhary-interiors/project10.jpeg',
+      description: 'Modern 2BHK interiors with balanced aesthetics, smart storage, and comfortable living spaces.',
       gallery: [
         '/choudhary-interiors/project1.jpeg',
         '/choudhary-interiors/project2.jpeg',
@@ -108,19 +111,19 @@ export default function PortfolioPage() {
         '/choudhary-interiors/project9.jpeg',
         '/choudhary-interiors/project10.jpeg'
       ],
-      details: 'This creative kids bedroom design combines fun aesthetics with practical functionality. We created a vibrant, safe, and imaginative space that grows with the child, incorporating storage solutions, study areas, and play zones seamlessly.'
+      details: 'This 2BHK project in Bhandup showcases thoughtful space planning with warm finishes and functional storage. We focused on creating a cohesive look across the living room, bedrooms, and kitchen while maintaining a bright, inviting feel.'
     },
     {
       id: 6,
-      title: 'Walk-In Wardrobe',
-      category: 'Modular',
-      location: 'Mumbai',
+      title: '3BHK Interior Project',
+      category: 'Residential',
+      location: 'Dombivali, Mumbai',
       image: '/choudhary-interiors/portfolio6.jpeg',
-      description: 'Luxury walk-in closet with custom organization and elegant finishes.',
+      description: 'Elegant 3BHK interiors with cohesive styling, smart storage, and functional layouts.',
       gallery: [
         '/choudhary-interiors/portfolio6.jpeg'
       ],
-      details: 'This luxury walk-in wardrobe project showcases our expertise in creating bespoke storage solutions. With custom organization systems, elegant finishes, and premium materials, we designed a sophisticated space that combines functionality with aesthetic appeal.'
+      details: 'This 3BHK project in Dombivali focuses on creating a balanced, modern look across all rooms with thoughtful storage solutions and warm, livable finishes. The design delivers comfort, functionality, and a cohesive aesthetic throughout the home.'
     },
     {
       id: 7,
@@ -141,6 +144,26 @@ export default function PortfolioPage() {
       description: 'Spa-like bathroom with premium fixtures and elegant marble finishes.',
       budget: '₹8 Lakhs',
       timeline: '5 weeks'
+    },
+    {
+      id: 9,
+      title: 'Project Highlights (Mixed)',
+      category: 'Highlights',
+      location: 'Mumbai',
+      image: '/choudhary-interiors/random1.jpeg',
+      description: 'A curated mix of snapshots from different projects and spaces we have completed.',
+      gallery: [
+        '/choudhary-interiors/random1.jpeg',
+        '/choudhary-interiors/random2.jpeg',
+        '/choudhary-interiors/random3.jpeg',
+        '/choudhary-interiors/random4.jpeg',
+        '/choudhary-interiors/random5.jpeg',
+        '/choudhary-interiors/random6.jpeg',
+        '/choudhary-interiors/random7.jpeg',
+        '/choudhary-interiors/random8.jpeg',
+        '/choudhary-interiors/random9.jpeg'
+      ],
+      details: 'This gallery showcases a mix of design highlights from multiple projects, featuring a variety of styles, finishes, and space types. It offers a quick look at our versatility and attention to detail across different client requirements.'
     }
   ]
 
@@ -242,15 +265,29 @@ export default function PortfolioPage() {
                             <div className="mb-12">
                               <h3 className="text-2xl font-bold text-charcoal mb-6">Project Gallery</h3>
                               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                                {project.gallery.map((image, index) => (
-                                  <div key={index} className="rounded-lg overflow-hidden shadow-md w-full">
-                                    <img
-                                      src={image}
-                                      alt={`Gallery ${index + 1}`}
-                                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                                    />
-                                  </div>
-                                ))}
+                                {project.gallery.map((item, index) => {
+                                  const isVideo = item.toLowerCase().endsWith('.mp4')
+
+                                  return (
+                                    <div key={index} className="rounded-lg overflow-hidden shadow-md w-full">
+                                      {isVideo ? (
+                                        <video
+                                          controls
+                                          className="w-full h-auto"
+                                        >
+                                          <source src={item} type="video/mp4" />
+                                          Your browser does not support the video tag.
+                                        </video>
+                                      ) : (
+                                        <img
+                                          src={item}
+                                          alt={`Gallery ${index + 1}`}
+                                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                        />
+                                      )}
+                                    </div>
+                                  )
+                                })}
                               </div>
                             </div>
                           )}
